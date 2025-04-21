@@ -7,7 +7,6 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('src/.nojekyll');
     eleventyConfig.addPlugin(syntaxHighlight);
 
-    // Убираем CSS из templateFormats, так как мы обрабатываем его через addExtension
     eleventyConfig.setTemplateFormats(['html', 'njk', 'md']);
 
     eleventyConfig.addExtension('css', {
@@ -47,8 +46,6 @@ module.exports = function(eleventyConfig) {
             input: 'src',
             output: 'site',
             includes: 'includes',
-            data: 'data',
-            layouts: 'layouts'
         },
         pathPrefix: process.env.SITE_PREFIX || '',
         quiet: false,
