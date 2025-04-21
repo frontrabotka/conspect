@@ -14,13 +14,13 @@
     "url": "https://github.com/frontrabotka/conspect.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "frontrabotka",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/frontrabotka/conspect/issues"
   },
   "homepage": "https://github.com/frontrabotka/conspect#readme",
-  "description": "",
+  "description": "Conspect – сайт-шпаргалка, где сложные технологии становятся понятными и доступными.",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-img": "^6.0.2",
