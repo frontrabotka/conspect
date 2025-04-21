@@ -4,8 +4,8 @@
   "main": "eleventy.js",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "ELEVENTY_ENV=production eleventy",
-    "clean": "rm -rf site",
+    "build": "cross-env ELEVENTY_ENV=production eleventy",
+    "clean": "rimraf site",
     "deploy": "npm run clean && npm run build",
     "check": "npm outdated --depth=0"
   },
@@ -25,6 +25,10 @@
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-img": "^6.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "eleventy-critical-css": "^2.0.2"
+    "cross-env": "^7.0.3",
+    "eleventy-critical-css": "^2.0.2",
+    "glob": "^9.0.0",
+    "html-minifier-terser": "^7.2.0",
+    "rimraf": "^4.4.0"
   }
 }
