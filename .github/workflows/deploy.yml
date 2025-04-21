@@ -1,52 +1,30 @@
-name: Deploy to GitHub Pages
+name: Deploy
 
 on:
   push:
-    branches: [ "main" ] # Или ваша основная ветка (например, master)
-  workflow_dispatch: # Позволяет запускать workflow вручную
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
+    branches:
+      - main
 
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 
-        uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # Или более поздняя версия
+          node-version: '16'
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build the site
+      - name: Build
         run: npm run build
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
+      - name: Deploy
+        uses: actions/deploy-pages@v4
         with:
-          # Automatically inject basePath in your HTML head tag.
-          static_site_generator: eleventy
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          # Upload entire `site` folder which is eleventy's default output folder
-          path: ./site
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
+          token: ${{ secrets.GITHUB_TOKEN }}
+          build-dir: ./site
