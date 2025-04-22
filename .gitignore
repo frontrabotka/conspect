@@ -1,11 +1,11 @@
-Thumbs.db
+humbs.db
 ehthumbs.db
 desktop.ini
 .cache
 .env
 .DS_Store
 node_modules/
-src/
-.jam-pack/
 .idea/
-{
+src/**/__tests__/
+src/**/.*.swp
+src/**/.DS_Store
