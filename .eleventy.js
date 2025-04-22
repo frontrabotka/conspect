@@ -47,7 +47,7 @@ module.exports = function(eleventyConfig) {
             output: 'site',
             includes: 'includes',
         },
-        pathPrefix: process.env.SITE_PREFIX || '',
+        pathPrefix: '/conspect',
         quiet: false,
         htmlOutputSuffix: '.html'
     };
