@@ -1280,7 +1280,7 @@ sandbox>
 {% set sources = [
 {
 href: 'https://doka.guide/html/',
-img: '../assets/img/html/doka.svg',
+img: 'assets/img/html/doka.svg',
 width: '40',
 height: '40',
 alt: 'сайт Дока',
@@ -1288,7 +1288,7 @@ cite: 'Дока'
 },
 {
 href: 'https://htmlacademy.ru/courses',
-img: '../assets/img/html/academy.svg',
+img: 'assets/img/html/academy.svg',
 width: '40',
 height: '60',
 alt: 'сайт HTML Academy',
@@ -1296,7 +1296,7 @@ cite: 'HTML Academy'
 },
 {
 href: 'https://web.dev/learn/html',
-img: '../assets/img/html/webdev.svg',
+img: 'assets/img/html/webdev.svg',
 width: '40',
 height: '60',
 alt: 'сайт web.dev',
@@ -1304,7 +1304,7 @@ cite: 'web.dev'
 },
 {
 href: 'https://www.freecodecamp.org/learn/full-stack-developer/',
-img: '../assets/img/html/freecode.svg',
+img: 'assets/img/html/freecode.svg',
 width: '40',
 height: '40',
 alt: 'сайт freeCodeCamp',
@@ -1312,7 +1312,7 @@ cite: 'freeCodeCamp'
 },
 {
 href: 'https://developer.mozilla.org/ru/docs/Learn',
-img: '../assets/img/html/MDN.webp',
+img: 'assets/img/html/MDN.webp',
 width: '80',
 height: '56',
 alt: 'сайт MDN',
