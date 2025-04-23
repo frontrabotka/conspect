@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Build, Deploy and Generate Sitemap
 
 on:
   push:
@@ -26,6 +26,11 @@ jobs:
       - name: Build with Eleventy
         run: npm run build
 
+      - name: Generate sitemap
+        uses: cicirello/generate-sitemap@v1
+        with:
+          base-url-path: https://frontrabotka.github.io/conspect/
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
@@ -34,7 +39,4 @@ jobs:
           clean: true
           token: ${{ secrets.GITHUB_TOKEN }}
           target-folder: ''
-          commit-message: 'Automated deploy'
-
-      - name: Clean up
-        run: npm run clean
+          commit-message: 'Automated deploy with sitemap'
