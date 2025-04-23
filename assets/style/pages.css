@@ -10,6 +10,14 @@ code, pre {
     word-wrap: break-word;
 }
 
+pre {
+    padding: 5px;
+    line-height: 1.6;
+    font-size: 15px;
+    border-radius: 8px;
+    border-bottom: 5px solid transparent;
+}
+
 code {
     padding: 1px;
     line-height: 1;
@@ -136,6 +144,22 @@ nav a:hover {
 
 .source-list li a:hover { /* стиль для наведения на ссылку <a> */
     text-decoration: underline;
+}
+
+.rose {
+    color: #ff69b4;;
+}
+
+.yellow {
+    color: #ffff00;
+}
+
+.green {
+    color: #98fb98;
+}
+
+.blue {
+    color: #4E9EF4;
 }
 
 @media screen and (max-width: 767px) {
