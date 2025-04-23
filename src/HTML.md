@@ -7,7 +7,7 @@ permalink: /HTML.html
 {% extends "layout.njk" %}
 
 {% block content %}
-<main>
+
 <header>
 
 # HTML
@@ -1327,7 +1327,5 @@ cite: 'MDN'
 </ul>
 </section>
 </footer>
-
-</main>
 
 {% endblock %}
