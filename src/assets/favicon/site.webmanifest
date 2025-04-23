@@ -15,7 +15,7 @@
       "purpose": "maskable"
     },
     {
-      "src": "/icon-144x144.png", // Пример: добавьте еще один квадратный значок
+      "src": "/icon-144x144.png", 
       "sizes": "144x144",
       "type": "image/png",
       "purpose": "any"
@@ -24,15 +24,15 @@
   "screenshots": [
     {
       "src": "/screenshots/screenshot-mobile.png",
-      "sizes": "540x720", // Пример: размер скриншота для мобильных
+      "sizes": "540x720", 
       "type": "image/png",
-      "form_factor": "narrow" // Указываем для узких экранов (мобильные)
+      "form_factor": "narrow"
     },
     {
       "src": "/screenshots/screenshot-desktop.png",
-      "sizes": "1920x1080", // Пример: размер скриншота для десктопа
+      "sizes": "1920x1080",
       "type": "image/png",
-      "form_factor": "wide"   // Указываем для широких экранов (десктоп)
+      "form_factor": "wide"  
     }
   ],
   "theme_color": "#ffffff",
