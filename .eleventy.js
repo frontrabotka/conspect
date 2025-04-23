@@ -5,7 +5,6 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('src/assets');
     eleventyConfig.addPassthroughCopy('src/CNAME');
     eleventyConfig.addPassthroughCopy('src/.nojekyll');
-    eleventyConfig.addPassthroughCopy('manifest.json');
     eleventyConfig.addPassthroughCopy('robots.txt');
     eleventyConfig.addPassthroughCopy('sitemap.xml');
     eleventyConfig.addPlugin(syntaxHighlight);
