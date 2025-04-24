@@ -1,7 +1,8 @@
 ---
 title: "HTML"
-description: "HTML — гипертекстовой разметки текста"
-permalink: /HTML.html
+description: "HTML — язык гипертекстовой разметки текста"
+permalink: /html.html
+url: "https://frontrabotka.github.io/conspect/html"
 ---
 
 {% extends "layout.njk" %}
