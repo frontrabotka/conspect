@@ -1,8 +1,8 @@
 {
   "name": "Conspect",
   "short_name": "Conspect",
-  "start_url": "https://frontrabotka.github.io/conspect/",
-  "scope": "https://frontrabotka.github.io/conspect/",
+  "start_url": "/conspect/",
+  "scope": "/conspect/",
   "icons": [
     {
       "src": "assets/favicon/android-chrome-192x192.png",
