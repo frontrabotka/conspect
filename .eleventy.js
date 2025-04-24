@@ -50,7 +50,6 @@ module.exports = function(eleventyConfig) {
             includes: 'includes',
         },
         pathPrefix: '/conspect',
-        quiet: false,
-        htmlOutputSuffix: '.html'
+        quiet: false
     };
 };
