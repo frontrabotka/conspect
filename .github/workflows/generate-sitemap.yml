@@ -20,10 +20,10 @@ jobs:
         with:
           base-url-path: https://frontrabotka.github.io/conspect/
           exclude:
-            - /src/
-            - /assets/
-            - /.git/
-            - /.github/
+            - conspect/src/
+            - conspect/src/assets/
+            - conspect/.git/
+            - conspect/.github/
 
       - name: Commit and push
         run: |
