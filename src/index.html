@@ -87,5 +87,18 @@
 
 {% include 'footer.njk' %}
 
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('scripts/sw.js')
+				.then(registration => {
+					console.log('ServiceWorker зарегистрирован:', registration);
+				})
+				.catch(registrationError => {
+					console.error('Ошибка регистрации ServiceWorker:', registrationError);
+				});
+		}
+	});
+</script>
 </body>
 </html>
