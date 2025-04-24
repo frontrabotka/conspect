@@ -19,11 +19,6 @@ jobs:
         uses: cicirello/generate-sitemap@v1
         with:
           base-url-path: https://frontrabotka.github.io/conspect/
-          exclude:
-            - conspect/src/
-            - conspect/src/assets/
-            - conspect/.git/
-            - conspect/.github/
 
       - name: Commit and push
         run: |
