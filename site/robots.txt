@@ -1,12 +1,4 @@
 User-agent: *
-Allow: /
 Allow: /conspect/
 Allow: /conspect/index.html
-
-Disallow: /node_modules/
-Disallow: /.git/
-Disallow: /.github/
-
 Sitemap: https://frontrabotka.github.io/conspect/sitemap.xml
-
-Crawl-delay: 10
