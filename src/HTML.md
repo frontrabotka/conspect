@@ -32,7 +32,7 @@ url: "https://frontrabotka.github.io/conspect/html"
 </nav>
 </header>
 
-<span class="cursive"><small>Дата последней правки: </small><time datetime="2025-05-01"><small>1 мая 2025</small></time></span>
+<span class="cursive"><small>Дата последней правки: </small><time datetime="2025-04-25"><small>25 апреля 2025</small></time></span>
 
 <section>
 
