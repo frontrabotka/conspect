@@ -1,23 +1,36 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>https://frontrabotka.github.io/conspect/site/</loc>
-<lastmod>2025-04-25T11:47:38+03:00</lastmod>
-</url>
-<url>
-<loc>https://frontrabotka.github.io/conspect/site/HTML.html</loc>
-<lastmod>2025-04-25T11:47:38+03:00</lastmod>
-</url>
-<url>
-<loc>https://frontrabotka.github.io/conspect/site/error-page.html</loc>
-<lastmod>2025-04-25T11:47:38+03:00</lastmod>
-</url>
-<url>
-<loc>https://frontrabotka.github.io/conspect/src/</loc>
-<lastmod>2025-04-25T11:47:38+03:00</lastmod>
-</url>
-<url>
-<loc>https://frontrabotka.github.io/conspect/src/error-page.html</loc>
-<lastmod>2025-04-25T11:47:38+03:00</lastmod>
-</url>
+    
+        
+            <url>
+                <loc>/conspect/html.html</loc>
+                <lastmod>2025-04-25T08:33:08.910Z</lastmod>
+                <changefreq>monthly</changefreq>
+            </url>
+        
+    
+        
+            <url>
+                <loc>/conspect/error-page.html</loc>
+                <lastmod>2025-04-25T08:33:08.912Z</lastmod>
+                <changefreq>monthly</changefreq>
+            </url>
+        
+    
+        
+            <url>
+                <loc>/conspect/</loc>
+                <lastmod>2025-04-25T08:33:08.912Z</lastmod>
+                <changefreq>monthly</changefreq>
+            </url>
+        
+    
+        
+            <url>
+                <loc>/conspect/sitemap.xml</loc>
+                <lastmod>2025-04-25T08:33:08.912Z</lastmod>
+                <changefreq>monthly</changefreq>
+            </url>
+        
+    
 </urlset>
