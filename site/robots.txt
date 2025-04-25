@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /conspect/
-Allow: /conspect/index.html
-Sitemap: https://frontrabotka.github.io/conspect/sitemap.xml
