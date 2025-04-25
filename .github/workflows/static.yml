@@ -40,4 +40,4 @@ jobs:
           curl -X POST \
           -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
           -H "Content-Length: 0" \
-          https://api.github.com/repos/${GITHUB_REPOSITORY}/pages/builds
+          https://api.github.com/repos/${frontrabotka/conspect}/pages/builds
