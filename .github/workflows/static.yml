@@ -30,6 +30,16 @@ jobs:
         uses: cicirello/generate-sitemap@v1
         with:
           base-url-path: https://frontrabotka.github.io/conspect/
+          sitemap-path: sitemap.xml
+
+      - name: Commit and push sitemap
+        run: |
+          cd site
+          git config --global user.name 'github-actions'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add sitemap.xml
+          git commit -m "Automated sitemap update" sitemap.xml || echo "No changes to commit"
+          git push
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
