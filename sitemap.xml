@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+        
+            <url>
+                <loc>/html.html</loc>
+                <lastmod>2025-04-25T19:13:09.887Z</lastmod>
+                <changefreq>monthly</changefreq>
+            </url>
+        
+    
+        
+            <url>
+                <loc>/error-page.html</loc>
+                <lastmod>2025-04-25T19:13:09.890Z</lastmod>
+                <changefreq>monthly</changefreq>
+            </url>
+        
+    
+        
+            <url>
+                <loc>/</loc>
+                <lastmod>2025-04-25T19:13:09.890Z</lastmod>
+                <changefreq>monthly</changefreq>
+            </url>
+        
+    
+        
+            <url>
+                <loc>/sitemap.xml</loc>
+                <lastmod>2025-04-25T19:13:09.890Z</lastmod>
+                <changefreq>monthly</changefreq>
+            </url>
+        
+    
+</urlset>

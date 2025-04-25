@@ -1,0 +1,108 @@
+
+main {
+    margin-top: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.main-center {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center; /* Выравнивание столбцов по центру */
+    gap: 2rem; /* Отступ между столбцами */
+    min-height: 150px;
+}
+
+.nav-column {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирование элементов в столбце */
+    will-change: transform;
+}
+
+nav ul { /* список */
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.navigation-button {
+    display: flex;
+    align-items: center;
+    padding: 8px 24px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    color: #0056b3;
+    border: 2px solid transparent;
+    outline: none;
+    font-weight: 700;
+    height: 58px; /* фиксированная высота */
+    box-sizing: border-box; /* учитываем padding в высоте */
+    contain: content;
+}
+
+.navigation-button img { /* иконки */
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.navigation-button:hover { /* кнопки навигации при наведении */
+    background-color: #f5f5f5;
+    color: #000;
+    border: 2px solid #333;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .main-center {
+        margin: 1rem;
+        padding: 0.5rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .navigation-button {
+        font-size: 12px;
+        padding: 6px 18px;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .navigation-button {
+        width: 100%;
+        font-size: 14px;
+        padding: 6px 18px;
+    }
+}
