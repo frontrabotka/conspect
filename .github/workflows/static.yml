@@ -26,11 +26,12 @@ jobs:
       - name: Build with Eleventy
         run: npm run build
 
+      - name: List files in site directory
+        run: ls -la ./site
+
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          branch: gh-pages
-          folder: site
-          clean: true
-          token: ${{ secrets.GITHUB_TOKEN }}
-          target-folder: ''
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          force_orphan: true
