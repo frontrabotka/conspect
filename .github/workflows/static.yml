@@ -1,20 +1,29 @@
-name: Build and Deploy
+name: Build, Deploy and Generate Sitemap
 
 on:
   push:
-    branches: ['main']
+    branches:
+      - main
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
       - run: npm ci
       - run: npm run build
-      - uses: actions/upload-pages-artifact@v2
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_REPOSITORY: ${{ github.repository }}
+      - uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: site
+          clean: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+          target-folder: ''
+      - name: Trigger GitHub Pages rebuild
+        run: |
+          curl -X POST \
+          -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+          -H "Content-Length: 0" \
+          -H "X-GitHub-Api-Version: 2023-11-28" \
+          https://api.github.com/repos/${GITHUB_REPOSITORY}/pages/builds
