@@ -34,10 +34,3 @@ jobs:
           clean: true
           token: ${{ secrets.GITHUB_TOKEN }}
           target-folder: ''
-
-      - name: Trigger GitHub Pages rebuild
-        run: |
-          curl -X POST \
-          -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-          -H "Content-Length: 0" \
-          https://api.github.com/repos/${GITHUB_REPOSITORY}/pages/builds
