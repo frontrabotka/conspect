@@ -1290,16 +1290,16 @@ cite: 'Дока'
 {
 href: 'https://htmlacademy.ru/courses',
 img: 'assets/img/html/academy.svg',
-width: '40',
-height: '40',
+width: '45',
+height: '45',
 alt: 'сайт HTML Academy',
 cite: 'HTML Academy'
 },
 {
 href: 'https://web.dev/learn/html',
 img: 'assets/img/html/webdev.svg',
-width: '40',
-height: '60',
+width: '44',
+height: '38',
 alt: 'сайт web.dev',
 cite: 'web.dev'
 },
