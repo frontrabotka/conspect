@@ -1291,7 +1291,7 @@ cite: 'Дока'
 href: 'https://htmlacademy.ru/courses',
 img: 'assets/img/html/academy.svg',
 width: '40',
-height: '60',
+height: '40',
 alt: 'сайт HTML Academy',
 cite: 'HTML Academy'
 },
