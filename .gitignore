@@ -6,7 +6,6 @@ desktop.ini
 .DS_Store
 node_modules/
 .idea/
-site/
 src/**/__tests__/
 src/**/.*.swp
 src/**/.DS_Store
