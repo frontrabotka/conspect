@@ -4,7 +4,7 @@
         
             <url>
                 <loc>/conspect/html.html</loc>
-                <lastmod>2025-04-27T08:00:24.700Z</lastmod>
+                <lastmod>2025-04-27T16:42:02.788Z</lastmod>
                 <changefreq>monthly</changefreq>
             </url>
         
@@ -12,7 +12,7 @@
         
             <url>
                 <loc>/conspect/error-page.html</loc>
-                <lastmod>2025-04-27T08:00:24.702Z</lastmod>
+                <lastmod>2025-04-27T16:42:02.790Z</lastmod>
                 <changefreq>monthly</changefreq>
             </url>
         
@@ -20,7 +20,7 @@
         
             <url>
                 <loc>/conspect/</loc>
-                <lastmod>2025-04-27T08:00:24.702Z</lastmod>
+                <lastmod>2025-04-27T16:42:02.790Z</lastmod>
                 <changefreq>monthly</changefreq>
             </url>
         
@@ -28,7 +28,15 @@
         
             <url>
                 <loc>/conspect/sitemap.xml</loc>
-                <lastmod>2025-04-27T08:00:24.702Z</lastmod>
+                <lastmod>2025-04-27T16:42:02.790Z</lastmod>
+                <changefreq>monthly</changefreq>
+            </url>
+        
+    
+        
+            <url>
+                <loc>/conspect/yandex_cc1be7f44a693309/</loc>
+                <lastmod>2025-04-27T16:42:02.790Z</lastmod>
                 <changefreq>monthly</changefreq>
             </url>
         
