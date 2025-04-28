@@ -1,10 +1,11 @@
+
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
         
             <url>
                 <loc>/conspect/html.html</loc>
-                <lastmod>2025-04-28T17:30:31.364Z</lastmod>
+                <lastmod>2025-04-28T17:33:27.562Z</lastmod>
                 <changefreq>monthly</changefreq>
             </url>
         
@@ -12,23 +13,17 @@
         
             <url>
                 <loc>/conspect/error-page.html</loc>
-                <lastmod>2025-04-28T17:30:31.366Z</lastmod>
+                <lastmod>2025-04-28T17:33:27.564Z</lastmod>
                 <changefreq>monthly</changefreq>
             </url>
         
     
-        
-            <url>
-                <loc>/conspect/google21a4260b40382dd9.html</loc>
-                <lastmod>2025-04-28T17:30:31.366Z</lastmod>
-                <changefreq>monthly</changefreq>
-            </url>
         
     
         
             <url>
                 <loc>/conspect/</loc>
-                <lastmod>2025-04-28T17:30:31.366Z</lastmod>
+                <lastmod>2025-04-28T17:33:27.564Z</lastmod>
                 <changefreq>monthly</changefreq>
             </url>
         
@@ -36,7 +31,7 @@
         
             <url>
                 <loc>/conspect/sitemap.xml</loc>
-                <lastmod>2025-04-28T17:30:31.366Z</lastmod>
+                <lastmod>2025-04-28T17:33:27.564Z</lastmod>
                 <changefreq>monthly</changefreq>
             </url>
         
