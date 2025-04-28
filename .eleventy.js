@@ -50,6 +50,7 @@ module.exports = function (eleventyConfig) {
             output: 'site',
             includes: 'includes',
         },
+        pathPrefix: '/conspect',
         quiet: false,
         data: {
             site: {
