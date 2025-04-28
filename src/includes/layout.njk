@@ -1,48 +1,89 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content=
-          "{{ description if description else 'Conspect - коллекция практических конспектов по веб-разработке. Учебные материалы по HTML, CSS, JavaScript и другим технологиям.' }}"
-          name="description">
-    <meta content="frontrabotka.github" name="author">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-          rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+            content="{{ description if description else 'Conspect - коллекция практических конспектов по веб-разработке. Учебные материалы по HTML, CSS, JavaScript и другим технологиям.' }}"
+            name="description"
+    />
+    <meta content="frontrabotka.github" name="author" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+            rel="stylesheet"
+    />
     <title>{{ title if title else 'Conspect' }}</title>
-    <meta property="og:url" content="{{ url if url else 'https://frontrabotka.github.io/conspect/' }}">
-    <meta property="og:title" content="Conspect">
-    <meta property="og:description"
-          content="{{ description if description else 'Conspect - коллекция практических конспектов по веб-разработке. Учебные материалы по HTML, CSS, JavaScript и другим технологиям.' }}">
-    <meta property="og:image" content="https://frontrabotka.github.io/conspect/assets/favicon/og-image.png">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Conspect">
-    <meta property="og:locale" content="ru_RU">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="{{ url if url else 'https://frontrabotka.github.io/conspect/' }}">
-    <meta property="twitter:title" content="Conspect">
-    <meta property="twitter:description"
-          content="{{ description if description else 'Conspect - коллекция практических конспектов по веб-разработке. Учебные материалы по HTML, CSS, JavaScript и другим технологиям.' }}">
-    <meta property="twitter:image" content="https://frontrabotka.github.io/conspect/assets/favicon/og-image.png">
-    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" sizes="any"/>
-    <link href="assets/favicon/favicon-48x48.png" rel="icon" sizes="48x48" type="image/png">
-    <link href="assets/favicon/favicon.ico" rel="shortcut icon">
-    <link href="assets/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
-    <meta content="Conspect" name="apple-mobile-web-app-title">
-    <link href="manifest.json" rel="manifest">
-    <link href="assets/favicon/android-chrome-192x192.png" rel="icon" sizes="192x192" type="image/png">
-    <link href="assets/favicon/android-chrome-512x512.png" rel="icon" sizes="512x512" type="image/png">
-    <link href="assets/style/main.css" rel="stylesheet">
-    <link href="assets/style/pages.css" rel="stylesheet">
-    <link href="assets/style/prism.css" rel="stylesheet">
+    <meta
+            property="og:url"
+            content="{{ url if url else 'https://frontrabotka.github.io/conspect/' }}"
+    />
+    <meta property="og:title" content="Conspect" />
+    <meta
+            property="og:description"
+            content="{{ description if description else 'Conspect - коллекция практических конспектов по веб-разработке. Учебные материалы по HTML, CSS, JavaScript и другим технологиям.' }}"
+    />
+    <meta
+            property="og:image"
+            content="https://frontrabotka.github.io/conspect/assets/favicon/og-image.png"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Conspect" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+            property="twitter:url"
+            content="{{ url if url else 'https://frontrabotka.github.io/conspect/' }}"
+    />
+    <meta property="twitter:title" content="Conspect" />
+    <meta
+            property="twitter:description"
+            content="{{ description if description else 'Conspect - коллекция практических конспектов по веб-разработке. Учебные материалы по HTML, CSS, JavaScript и другим технологиям.' }}"
+    />
+    <meta
+            property="twitter:image"
+            content="https://frontrabotka.github.io/conspect/assets/favicon/og-image.png"
+    />
+    <link
+            rel="icon"
+            type="image/svg+xml"
+            href="assets/favicon/favicon.svg"
+            sizes="any"
+    />
+    <link
+            href="assets/favicon/favicon-48x48.png"
+            rel="icon"
+            sizes="48x48"
+            type="image/png"
+    />
+    <link href="assets/favicon/favicon.ico" rel="shortcut icon" />
+    <link
+            href="assets/favicon/apple-touch-icon.png"
+            rel="apple-touch-icon"
+            sizes="180x180"
+    />
+    <meta content="Conspect" name="apple-mobile-web-app-title" />
+    <link href="manifest.json" rel="manifest" />
+    <link
+            href="assets/favicon/android-chrome-192x192.png"
+            rel="icon"
+            sizes="192x192"
+            type="image/png"
+    />
+    <link
+            href="assets/favicon/android-chrome-512x512.png"
+            rel="icon"
+            sizes="512x512"
+            type="image/png"
+    />
+    <link href="assets/style/main.css" rel="stylesheet" />
+    <link href="assets/style/pages.css" rel="stylesheet" />
+    <link href="assets/style/prism.css" rel="stylesheet" />
 </head>
 <body>
 {% include 'header.njk' %}
-<main>
-    {% block content %}{% endblock %}
-</main>
+<main>{% block content %}{% endblock %}</main>
 {% include 'footer.njk' %}
 </body>
 </html>
