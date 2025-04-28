@@ -5,10 +5,10 @@ permalink: /sitemap.xml
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {% for page in collections.all %}
         {% if not page.data.draft and not page.data.exclude_from_sitemap and page.url != "/conspect/google21a4260b40382dd9.html" %}
-            {% set pageUrl = (page.url.startsWith('/') ? page.url : '/' + page.url) %}
+            {% set pageUrl = page.url.startsWith('/') ? page.url : '/' + page.url %}
             <url>
                 <loc>{{ site.url }}{{ pageUrl }}</loc>
-                <lastmod>{{ page.date.toISOString() }}</lastmod>
+                <lastmod>{{ page.date | toISOString() }}</lastmod>
                 <changefreq>{{ page.data.changeFreq if page.data.changeFreq else "monthly" }}</changefreq>
             </url>
         {% endif %}
