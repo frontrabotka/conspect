@@ -2,6 +2,17 @@
 permalink: /sitemap.xml
 excludeFromSitemap: true
 ---
+<!-- site.url: {{ site.url }} -->
+<!-- collections.all.length: {{ collections.all.length }} -->
+
+{% for page in collections.all %}
+  <!-- page.url: {{ page.url }} -->
+  <!-- page.data.title: {{ page.data.title }} -->
+  <!-- page.date: {{ page.date }} -->
+  <!-- page.data.excludeFromSitemap: {{ page.data.excludeFromSitemap }} -->
+  <!-- page.filePathStem: {{ page.filePathStem }} -->
+{% endfor %}
+
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {%- for page in collections.all -%}
