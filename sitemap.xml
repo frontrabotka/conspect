@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
-                <loc>./html.html</loc>
-                <lastmod>2025-04-28T18:14:55.789Z</lastmod>
+                <loc>./conspect/html.html</loc>
+                <lastmod>2025-04-28T18:16:39.188Z</lastmod>
                 <changefreq>monthly</changefreq>
             </url><url>
-                <loc>./</loc>
-                <lastmod>2025-04-28T18:14:55.791Z</lastmod>
+                <loc>./conspect/</loc>
+                <lastmod>2025-04-28T18:16:39.190Z</lastmod>
                 <changefreq>monthly</changefreq>
             </url></urlset>
