@@ -54,6 +54,7 @@ module.exports = function (eleventyConfig) {
         quiet: false,
         data: {
             site: {
+                url: "https://frontrabotka.github.io/conspect/",
                 name: "Conspect"
             }
         }
