@@ -1,26 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    
-        
-            <url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
                 <loc>./conspect/html.html</loc>
-                <lastmod>2025-04-28T17:56:38.755Z</lastmod>
+                <lastmod>2025-04-28T18:03:18.432Z</lastmod>
                 <changefreq>monthly</changefreq>
-            </url>
-        
-    
-        
-    
-        
-    
-        
-            <url>
+            </url><url>
                 <loc>./conspect/</loc>
-                <lastmod>2025-04-28T17:56:38.757Z</lastmod>
+                <lastmod>2025-04-28T18:03:18.435Z</lastmod>
                 <changefreq>monthly</changefreq>
-            </url>
-        
-    
-        
-    
-</urlset>
+            </url></urlset>
