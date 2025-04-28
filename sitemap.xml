@@ -1,10 +1,45 @@
+<!-- site.url:  -->
+<!-- collections.all.length: 5 -->
+
+
+  <!-- page.url: /html.html -->
+  <!-- page.data.title: HTML -->
+  <!-- page.date: Mon Apr 28 2025 18:17:28 GMT+0000 (Coordinated Universal Time) -->
+  <!-- page.data.excludeFromSitemap:  -->
+  <!-- page.filePathStem: /HTML -->
+
+  <!-- page.url: /error-page.html -->
+  <!-- page.data.title:  -->
+  <!-- page.date: Mon Apr 28 2025 18:17:28 GMT+0000 (Coordinated Universal Time) -->
+  <!-- page.data.excludeFromSitemap: true -->
+  <!-- page.filePathStem: /error-page -->
+
+  <!-- page.url: /google21a4260b40382dd9.html -->
+  <!-- page.data.title:  -->
+  <!-- page.date: Mon Apr 28 2025 18:17:28 GMT+0000 (Coordinated Universal Time) -->
+  <!-- page.data.excludeFromSitemap: true -->
+  <!-- page.filePathStem: /google21a4260b40382dd9 -->
+
+  <!-- page.url: / -->
+  <!-- page.data.title:  -->
+  <!-- page.date: Mon Apr 28 2025 18:17:28 GMT+0000 (Coordinated Universal Time) -->
+  <!-- page.data.excludeFromSitemap:  -->
+  <!-- page.filePathStem: /index -->
+
+  <!-- page.url: /sitemap.xml -->
+  <!-- page.data.title:  -->
+  <!-- page.date: Mon Apr 28 2025 18:17:28 GMT+0000 (Coordinated Universal Time) -->
+  <!-- page.data.excludeFromSitemap: true -->
+  <!-- page.filePathStem: /pages/sitemap -->
+
+
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
                 <loc>./conspect/html.html</loc>
-                <lastmod>2025-04-28T18:16:39.188Z</lastmod>
+                <lastmod>2025-04-28T18:17:28.126Z</lastmod>
                 <changefreq>monthly</changefreq>
             </url><url>
                 <loc>./conspect/</loc>
-                <lastmod>2025-04-28T18:16:39.190Z</lastmod>
+                <lastmod>2025-04-28T18:17:28.129Z</lastmod>
                 <changefreq>monthly</changefreq>
             </url></urlset>
