@@ -1,11 +1,12 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const {minify} = require("html-minifier-terser");
+const { minify } = require("html-minifier-terser");
 
-module.exports = function (eleventyConfig) {
+module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('src/assets');
     eleventyConfig.addPassthroughCopy('src/CNAME');
     eleventyConfig.addPassthroughCopy('src/.nojekyll');
     eleventyConfig.addPassthroughCopy('robots.txt');
+    eleventyConfig.addPassthroughCopy('src/sitemap.xml');
     eleventyConfig.addPassthroughCopy('manifest.json');
     eleventyConfig.addPassthroughCopy('src/scripts/**/*');
     eleventyConfig.addPlugin(syntaxHighlight);
@@ -48,15 +49,12 @@ module.exports = function (eleventyConfig) {
         dir: {
             input: 'src',
             output: 'site',
-            includes: 'includes',
+            includes: 'includes'
         },
         pathPrefix: '/conspect',
         quiet: false,
         data: {
-            site: {
-                url: "https://frontrabotka.github.io/conspect/",
-                name: "Conspect"
-            }
+            site: {}
         }
     };
-}
+};
