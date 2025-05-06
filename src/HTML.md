@@ -11,7 +11,7 @@ url: "https://frontrabotka.github.io/conspect/html"
 
 <header>
 
-# HTML
+# {{ title }}
 
 <nav>
   <h2 class="heading">Навигация по странице</h2>

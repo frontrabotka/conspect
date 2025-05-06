@@ -151,12 +151,31 @@ nav a:hover {
     h1, h2 {
         font-size: 25px;
     }
+
+    .source-list li {
+        flex: 1 1 calc(50% - 40px);
+        max-width: none;
+    }
+
+    .source-list li cite {
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
     /* стили для figcaption */
     figcaption {
         font-size: 0.9em;
+    }
+
+    .source-list li {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .source-list li img {
+        max-width: 80vw;
+        margin: 0 auto;
     }
 }
 

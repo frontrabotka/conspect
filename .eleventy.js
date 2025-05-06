@@ -4,7 +4,7 @@ const { minify } = require("html-minifier-terser");
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('src/assets');
     eleventyConfig.addPassthroughCopy('src/CNAME');
-    eleventyConfig.addPassthroughCopy('src/.nojekyll');
+    eleventyConfig.addPassthroughCopy('.nojekyll');
     eleventyConfig.addPassthroughCopy('robots.txt');
     eleventyConfig.addPassthroughCopy('src/sitemap.xml');
     eleventyConfig.addPassthroughCopy('manifest.json');
