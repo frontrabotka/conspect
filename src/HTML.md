@@ -1376,9 +1376,9 @@ cite: 'freeCodeCamp'
 },
 {
 href: 'https://developer.mozilla.org/ru/docs/Learn',
-img: 'assets/img/html/MDN.webp',
-width: '80',
-height: '56',
+img: 'assets/img/html/MDN.png',
+width: '40',
+height: '40',
 alt: 'сайт MDN',
 cite: 'MDN'
 }
