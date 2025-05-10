@@ -1,88 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta charset="UTF-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta
     content="Conspect - коллекция практических конспектов по веб-разработке. Учебные материалы по HTML, CSS, JavaScript и другим технологиям."
     name="description"
   />
-  <meta content="frontrabotka.github" name="author" />
-  <link href="https://fonts.googleapis.com" rel="preconnect" />
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin/>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    href="assets/favicon/favicon.svg"
-    rel="icon"
-    sizes="any"
-    type="image/svg+xml"
-  />
-  <link
-    href="assets/favicon/favicon-48x48.png"
-    rel="icon"
-    sizes="48x48"
-    type="image/png"
-  />
-  <link
-    href="assets/favicon/favicon.ico"
-    rel="icon"
-    type="image/x-icon"
-  />
-  <link
-    href="assets/favicon/apple-touch-icon.png"
-    rel="apple-touch-icon"
-    sizes="180x180"
-  />
-  <meta content="Conspect" name="apple-mobile-web-app-title" />
-  <link href="manifest.webmanifest" rel="manifest" />
-  <link
-    href="assets/favicon/android-chrome-192x192.png"
-    rel="icon"
-    sizes="192x192"
-    type="image/png"
-  />
-  <link
-    href="assets/favicon/android-chrome-512x512.png"
-    rel="icon"
-    sizes="512x512"
-    type="image/png"
-  />
+  <meta content="frontrabotka.github" name="author"/>
   <title>Conspect</title>
-  <meta
-    content="https://frontrabotka.github.io/conspect/"
-    property="og:url"
-  />
-  <meta content="Conspect" property="og:title" />
-  <meta
-    content="Conspect - коллекция практических конспектов по веб-разработке. Учебные материалы по HTML, CSS, JavaScript и другим технологиям."
-    property="og:description"
-  />
-  <meta
-    content="https://frontrabotka.github.io/conspect/assets/favicon/og-image.png"
-    property="og:image"
-  />
-  <meta content="website" property="og:type" />
-  <meta content="Conspect" property="og:site_name" />
-  <meta content="ru_RU" property="og:locale" />
-  <meta content="summary_large_image" property="twitter:card" />
-  <meta
-    content="https://frontrabotka.github.io/conspect/"
-    property="twitter:url"
-  />
-  <meta content="Conspect" property="twitter:title" />
-  <meta
-    content="Conspect - коллекция практических конспектов по веб-разработке. Учебные материалы по HTML, CSS, JavaScript и другим технологиям."
-    property="twitter:description"
-  />
-  <meta
-    content="https://frontrabotka.github.io/conspect/assets/favicon/og-image.png"
-    property="twitter:image"
-  />
-  <link href="assets/style/main.css" rel="stylesheet" />
-  <link href="assets/style/home.css" rel="stylesheet" />
+  {% include 'fonts.njk' %}
+  {% include 'favicon.njk' %}
+  {% include 'open-graph.njk' %}
+  <link href="assets/style/main.css" rel="stylesheet"/>
+  <link href="assets/style/home.css" rel="stylesheet"/>
 </head>
 <body>
 <header>

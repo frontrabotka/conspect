@@ -1,6 +1,5 @@
 ---
 permalink: "/error-page.html"
-excludeFromSitemap: true
 ---
 
 <!DOCTYPE html>
@@ -13,44 +12,8 @@ excludeFromSitemap: true
     name="description"
   />
   <title>Страница в разработке</title>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link
-    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    href="assets/favicon/favicon.svg"
-    rel="icon"
-    sizes="any"
-    type="image/svg+xml"
-  />
-  <link
-    href="assets/favicon/favicon-48x48.png"
-    rel="icon"
-    sizes="48x48"
-    type="image/png"
-  />
-  <link href="assets/favicon/favicon.ico" rel="icon"/>
-  <link
-    href="assets/favicon/apple-touch-icon.png"
-    rel="apple-touch-icon"
-    sizes="180x180"
-  />
-  <meta content="Conspect" name="apple-mobile-web-app-title"/>
-  <link href="manifest.webmanifest" rel="manifest"/>
-  <link
-    href="assets/favicon/android-chrome-192x192.png"
-    rel="icon"
-    sizes="192x192"
-    type="image/png"
-  />
-  <link
-    href="assets/favicon/android-chrome-512x512.png"
-    rel="icon"
-    sizes="512x512"
-    type="image/png"
-  />
+  {% include 'fonts.njk' %}
+  {% include 'favicon.njk' %}
   <link href="assets/style/404.css" rel="stylesheet"/>
 </head>
 <body>
