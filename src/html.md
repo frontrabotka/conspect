@@ -1,7 +1,7 @@
 ---
 title: "HTML"
 description: "HTML — язык гипертекстовой разметки текста"
-permalink: /html.html
+permalink: "{{ page.filePathStem }}/"
 ---
 
 {% extends "layout.njk" %}
