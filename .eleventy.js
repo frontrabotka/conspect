@@ -12,18 +12,6 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.setTemplateFormats(['html', 'njk', 'md']);
 
-    // Добавление глобальных правил для URL без расширений
-    eleventyConfig.addGlobalData("permalink", () => {
-        return (data) =>
-            `${data.page.filePathStem}.${data.page.outputFileExtension}`;
-    });
-
-    eleventyConfig.addUrlTransform((page) => {
-        if (page.url.endsWith(".html")) {
-            return page.url.slice(0, -1 * ".html".length);
-        }
-    });
-
     eleventyConfig.addExtension('css', {
         outputFileExtension: 'css',
         compile: async (content, path) => {
