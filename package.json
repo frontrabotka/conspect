@@ -25,10 +25,10 @@
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-img": "^6.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@codestitchofficial/eleventy-plugin-minify": "^1.1.3",
     "cross-env": "^7.0.3",
     "eleventy-critical-css": "^2.0.2",
     "glob": "^9.0.0",
-    "html-minifier-terser": "^7.2.0",
     "rimraf": "^4.4.0"
   }
 }
