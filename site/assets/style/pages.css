@@ -117,6 +117,10 @@ nav a:hover {
     margin-bottom: 1rem;
 }
 
+.blue {
+    color: #1313AE;
+}
+
 .source-list { /* шрифт для класса source-list в <ul> */
     display: flex;
     flex-wrap: wrap;
