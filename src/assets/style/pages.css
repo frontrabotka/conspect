@@ -1,5 +1,5 @@
 
-code, pre {
+code, kbd {
     font-family: 'JetBrains Mono', monospace;
     background-color: #282a36;
     color: #f8f8f2;
@@ -8,17 +8,6 @@ code, pre {
     overflow-x: auto;
     white-space: pre-wrap;
     word-wrap: break-word;
-}
-
-pre {
-    padding: 5px;
-    line-height: 1.6;
-    font-size: 15px;
-    border-radius: 8px;
-    border-bottom: 5px solid transparent;
-}
-
-code {
     padding: 1px;
     line-height: 1;
     font-size: 18px;
@@ -197,7 +186,7 @@ nav a:hover {
         font-size: 12px;
     }
 
-    pre, code {
+    code {
         font-size: 13px;
     }
 }
