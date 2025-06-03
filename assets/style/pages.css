@@ -4,10 +4,8 @@ code, kbd {
     background-color: #282a36;
     color: #f8f8f2;
     border-radius: 3px;
-    box-sizing: border-box;
     overflow-x: auto;
     white-space: pre-wrap;
-    word-wrap: break-word;
     padding: 1px;
     line-height: 1;
     font-size: 18px;
@@ -108,6 +106,7 @@ nav a:hover {
 
 .blue {
     color: #1313AE;
+    font-weight: bold;
 }
 
 .source-list { /* шрифт для класса source-list в <ul> */
@@ -137,22 +136,6 @@ nav a:hover {
 
 .source-list li a:hover { /* стиль для наведения на ссылку <a> */
     text-decoration: underline;
-}
-
-@media screen and (max-width: 767px) {
-    /* увеличиваем шрифт заголовков на мобильных */
-    h1, h2 {
-        font-size: 25px;
-    }
-
-    .source-list li {
-        flex: 1 1 calc(50% - 40px);
-        max-width: none;
-    }
-
-    .source-list li cite {
-        text-align: center;
-    }
 }
 
 @media (max-width: 480px) {
@@ -188,6 +171,19 @@ nav a:hover {
 
     code {
         font-size: 13px;
+    }
+
+    h1, h2 {
+        font-size: 25px;
+    }
+
+    .source-list li {
+        flex: 1 1 calc(50% - 40px);
+        max-width: none;
+    }
+
+    .source-list li cite {
+        text-align: center;
     }
 }
 
