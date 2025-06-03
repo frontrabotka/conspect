@@ -20,7 +20,7 @@
     "url": "https://github.com/frontrabotka/conspect/issues"
   },
   "homepage": "https://github.com/frontrabotka/conspect#readme",
-  "description": "Conspect – сайт-шпаргалка, где сложные технологии становятся понятными и доступными.",
+  "description": "Conspect - коллекция практических конспектов по веб-разработке. Учебные материалы по HTML, CSS, JavaScript и другим технологиям.",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-img": "^6.0.2",

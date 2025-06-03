@@ -12,7 +12,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.setTemplateFormats(['html', 'njk', 'md']);
 
     eleventyConfig.addPlugin(eleventyPluginFilesMinifier);
-    eleventyConfig.addPlugin(eleventyPluginFilesMinifier);
     eleventyConfig.addPlugin(syntaxHighlight, {
         templateFormats: ["njk", "md"],
         lineSeparator: "\n",
