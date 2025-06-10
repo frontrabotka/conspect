@@ -197,7 +197,7 @@ module.exports = function (eleventyConfig) {
 + `input: 'src'` — указывает, что исходные файлы находятся в папке <span class="blue">src</span>;
 + `output: 'site'` — результат сборки сайта будет сохраняться в папку <span class="blue">site</span>;
 + `includes: 'includes'` — указывает папку для переиспользуемых компонентов (частей страниц) внутри входной директории (<span class="blue">src</span>). В этом случае компоненты должны находиться в папке <span class="blue">src/includes</span>;
-+ `data: _data` — указывает папку для глобальных данных внутри входной директории (<span class="blue">src</span>). Глобальные данные должны находиться в папке <span class="blue">src/_data</span>.
++ `data: '_data'` — указывает папку для глобальных данных внутри входной директории (<span class="blue">src</span>). Глобальные данные должны находиться в папке <span class="blue">src/_data</span>.
 
 `pathPrefix: '/conspect'` — определяет базовый URL для сайта. Если сайт размещается в подкаталоге <span class="blue">/conspect</span> домена <span class="blue">example.com</span>, то `pathPrefix` должен быть установлен в <span class="blue">/conspect</span>. В этом случае все ссылки на сайте будут начинаться с <span class="blue">/conspect</span> (например, <span class="blue">/conspect/eleventy</span>).
 
@@ -222,7 +222,7 @@ Eleventy обрабатывает файлы с расширениями, ука
 Для начала создадим базовые шаблоны для проекта:
 
 1. Создайте папку <span class="blue">includes</span> (см. конфиг <a href="#header-2">.eleventy.js</a>) в папке <span class="blue">src</span>.
-2. Внутри папки <span class="blue">includes/</span> создайте файл <span class="blue">base.njk</span> (шаблон макета), который будет содержать основной HTML-каркас для каждой страницы:
+2. Внутри папки <span class="blue">includes</span> создайте файл <span class="blue">base.njk</span> (шаблон макета), который будет содержать основной HTML-каркас для каждой страницы:
 
 <figure>
 
@@ -486,6 +486,7 @@ post-1.json</span>.</small>
 <small class="cursive"><span class="bold">Примечание II</span>: в случае проблемы с отображением страницы <span class="blue">post-1.md</span> после запуска локального сервера, попробуйте:</small>
 
 <small class="cursive">1. Удалить содержимое папки <span class="blue">blog/</span> в выходной папке <span class="blue">site/</span>;</small>
+
 <small class="cursive">2. Перезапустить сервер.</small>
 
 </section>
@@ -510,9 +511,7 @@ post-1.json</span>.</small>
 ```json
 {
   "layout": "post.njk",
-  "tags": [
-    "posts"
-  ],
+  "tags": ["posts"],
   "author": "frontrabotka"
 }
 ```
@@ -548,6 +547,7 @@ brands:
 <small class="cursive"><span class="bold">Примечание</span>: в случае проблемы с отображением страницы <span class="blue">post-1.md</span> после запуска локального сервера, попробуйте:</small>
 
 <small class="cursive">1. Удалить содержимое папки <span class="blue">blog/</span> в выходной папке <span class="blue">site/</span>;</small>
+
 <small class="cursive">2. Перезапустить сервер.</small>
 
 </section>
@@ -802,7 +802,7 @@ permalink: "brands/{{ car.name | slugify }}/"
 
 `alias: car` — создаёт псевдоним для обращения к данным внутри шаблона. `alias: car` позволяет обращаться к данным каждой отдельной страницы пагинации через переменную `car`. Это удобно, когда структура данных сложная и нужно избежать путаницы. Не рекомендуется использовать `alias: page`, так как `page` — это зарезервированное слово в Eleventy. Также зарезервированы `pagination` и `collections`.
 
-`{% raw %} permalink: "brands/{{ car.name | slugify }}/"{% endraw %}` — определяет структуру URL для каждой создаваемой страницы. `{% raw %} {{ car.name }}{% endraw %}` выводит значение свойства `name` текущего объекта (автомобиля), к которому мы обращаемся по псевдониму `car`. Фильтр `| slugify` преобразует название в URL-friendly формат (например, «Легковые автомобили» → «legkovye-avtomobili»). Тогда будет создан файл <span class="blue">index.html</span> внутри папки <span class="blue">legkovye-avtomobili</span>: <span class="blue">brands/legkovye-avtomobili/index.html</span>.
+`{% raw %} permalink: "brands/{{ car.name | slugify }}/" {% endraw %}` — определяет структуру URL для каждой создаваемой страницы. `{% raw %} {{ car.name }} {% endraw %}` выводит значение свойства `name` текущего объекта (автомобиля), к которому мы обращаемся по псевдониму `car`. Фильтр `| slugify` преобразует название в URL-friendly формат (например, «Легковые автомобили» → «legkovye-avtomobili»). Тогда будет создан файл <span class="blue">index.html</span> внутри папки <span class="blue">legkovye-avtomobili</span>: <span class="blue">brands/legkovye-avtomobili/index.html</span>.
 
 Навигацию между страницами можно сделать с помощью переменных, которые Eleventy предоставляет для пагинации:
 
@@ -845,7 +845,7 @@ description: Коллекционные модели автомобилей ра
 <figcaption>Файл главной страницы: <span class="blue">index.md</span> (<span class="blue">src/index.md</span>)</figcaption>
 </figure>
 
-Как альтернативу, можно использовать следующий `{% raw %} permalink: "brands/page-{{ pagination.pageNumber }}/ {% endraw %}`. Тогда каждая страница в папке <span class="blue">brands/</span> будет иметь свой URL в формате:
+Как альтернативу, можно использовать следующий `{% raw %} permalink: "brands/page-{{ pagination.pageNumber }}/" {% endraw %}`. Тогда каждая страница в папке <span class="blue">brands/</span> будет иметь свой URL в формате:
 
 + <span class="blue">page-0/index.html</span>
 + <span class="blue">page-1/index.html</span>
@@ -921,7 +921,7 @@ Nunjucks позволяет изменить нумерацию страниц, 
 Универсальный фильтр `url` работает с `pathPrefix` (который задаётся в файле <a href="#header-2">.eleventy.js</a>) для корректной нормализации абсолютных путей. Это полезно, если сайт размещён на GitHub Pages, который часто находится в подкаталоге. Если `pathPrefix` не установлен, то фильтр `url` не делает ничего. Например, при `pathPrefix: '/conspect'` можно использовать фильтр `url` следующим образом:
 
 ```liquid
-<link rel="stylesheet" href="{% raw %} {{ '/css/style.css' | url }} {% endraw %}">  <!-- В шаблоне -->
+<link rel="stylesheet" href="{% raw %}{{ '/css/style.css' | url }}{% endraw %}">  <!-- В шаблоне -->
 <link rel="stylesheet" href="/conspect/css/style.css">  <!-- В результате -->
 ```
 
@@ -929,7 +929,7 @@ Nunjucks позволяет изменить нумерацию страниц, 
 Пример создания ссылки на главную страницу сайта (при условии, что в <span class="blue">.eleventy.js</span> установлен `pathPrefix`, иначе фильтр не будет работать):
 
 ```liquid
-<a href="{% raw %} {{ '/' | url }} {% endraw %}">Главная</a>  <!-- В шаблоне -->
+<a href="{% raw %}{{ '/' | url }}{% endraw %}">Главная</a>  <!-- В шаблоне -->
 <a href="/conspect/">Главная</a>  <!-- В результате -->
 ```
 
@@ -938,7 +938,7 @@ Nunjucks позволяет изменить нумерацию страниц, 
 ```liquid
 ---
 title: Легковые автомобили СССР
-permalink: "{% raw %} /{{ title | slugify }}/{% endraw %}"
+permalink: "{% raw %}/{{ title | slugify }}/{% endraw %}"
 ---
 ```
 
