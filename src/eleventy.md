@@ -1,5 +1,5 @@
 ---
-title: "Eleventy"
+title: "Гайд по Eleventy"
 description: "Eleventy — генератор статичных сайтов"
 permalink: /eleventy.html
 ---

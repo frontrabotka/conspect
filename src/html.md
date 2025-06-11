@@ -1,5 +1,5 @@
 ---
-title: "HTML"
+title: "Гайд по HTML"
 description: "HTML — язык гипертекстовой разметки текста"
 permalink: /html.html
 ---
