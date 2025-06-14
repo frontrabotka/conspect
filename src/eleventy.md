@@ -479,6 +479,8 @@ date: 2025-05-01
 <figcaption>Пост в блоге: файл <span class="blue">post-1.md</span> (<span class="blue">src/blog/post-1.md</span>)</figcaption>
 </figure>
 
+В файле <span class="bold">post-1.md</span> остались только `title`, `description`, `date`, `permalink` и `brands`, так как остальные параметры (`layout`, `tags`, `author`) теперь определены в файле данных каталога <span class="bold">blog.json</span>.
+
 Данные из файла данных шаблона автоматически объединятся с данными из Front Matter, при этом данные из Front Matter будут иметь приоритет.
 
 <small class="cursive"><span class="bold">Примечание I</span>: в файле <span class="blue">post-1.md</span> я оставил ключ date, так как Eleventy выдавал ошибку при сборке, если date находился в файле <span class="blue">
@@ -755,7 +757,7 @@ Eleventy автоматически включает весь контент (н
 <figcaption>Файл <span class="blue">brands.json</span> (<span class="blue">src/_data/brands.json</span>)</figcaption>
 </figure>
 
-2. Определите шаблон, который будет использоваться для каждой страницы пагинации. В этом случае это будет <span class="blue">cars.njk</span>. Создайте файл <span class="blue">cars.njk</span> в папке <span class="blue">src/</span>:
+2. Создадим шаблон <span class="blue">cars.njk</span>, который будет использоваться для каждой страницы пагинации:
 
 <figure>
 
@@ -797,7 +799,7 @@ permalink: "brands/{{ car.name | slugify }}/"
 
 Значение `pagination` во Frontmatter указывает Eleventy на необходимость создания нескольких страниц на основе данных, указанных в параметре `data`.
 
-`data: brands` — указывает источник данных для пагинации — файл <span class="blue">brands.json</span> внутри папки <span class="blue">_data</span>.
+`data: brands` — указывает Eleventy, что нужно создать несколько страниц на основе данных из файла <span class="blue">brands.json</span> в папке <span class="blue">_data/</span>.
 
 `size: 1` — определяет количество элементов на каждой странице. Значение `1` означает, что каждая запись из <span class="blue">brands.json</span> создаст отдельную страницу. Если бы было `2`, то страницы создавались бы по две записи на каждой.
 
@@ -820,7 +822,7 @@ permalink: "brands/{{ car.name | slugify }}/"
 + <span class="blue">inostrannye-avtomobili/index.html</span>
 + <span class="blue">legkovye-avtomobili-sssr/index.html</span>
 
-Для того чтобы на них перейти, измените файл <span class="blue">index.md</span>:
+Страницы сгенерированы, но пока не связаны с главной страницей. Чтобы добавить ссылки на эти страницы, измените файл <span class="blue">index.md</span>:
 
 <figure>
 
@@ -878,6 +880,8 @@ description: Коллекционные модели автомобилей ра
 <figcaption>Файл главной страницы: <span class="blue">index.md</span> (<span class="blue">src/index.md</span>)</figcaption>
 </figure>
 
+Нумерация страниц начинается с <span class="blue">0</span>, так как `pagination.pageNumber` — это индекс текущей страницы в массиве данных.
+
 Nunjucks позволяет изменить нумерацию страниц, начинающуюся с <span class="blue">0</span>, на нумерацию с <span class="blue">1</span>, добавив `+1`: `{% raw %} permalink: "brands/page-{{ pagination.pageNumber + 1 }}/index.html" {% endraw %}`.
 
 Результирующие страницы с данными будут обновляться автоматически, по мере добавления или редактирования записей в файле <span class="blue">brands.json</span>.
@@ -917,7 +921,7 @@ Nunjucks позволяет изменить нумерацию страниц, 
 
 ## <span id="header-12">Фильтры (Filters)</span>
 
-✒️ <dfn>Фильтры</dfn> в Eleventy — это функции JavaScript, которые принимают контент в шаблоне, обрабатывают его, а затем возвращают изменённый контент для отображения вместо оригинала.
+✒️ <dfn>Фильтры</dfn> в Eleventy — это функции JavaScript, которые принимают значения в шаблоне, обрабатывают его, а затем возвращают изменённый контент для отображения вместо оригинала. Фильтры применяются к значениям с помощью оператора `|`.
 
 Универсальный фильтр `url` работает с `pathPrefix` (который задаётся в файле <a href="#header-2">.eleventy.js</a>) для корректной нормализации абсолютных путей. Это полезно, если сайт размещён на GitHub Pages, который часто находится в подкаталоге. Если `pathPrefix` не установлен, то фильтр `url` не делает ничего. Например, при `pathPrefix: '/conspect'` можно использовать фильтр `url` следующим образом:
 
