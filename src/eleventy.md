@@ -479,7 +479,7 @@ date: 2025-05-01
 <figcaption>Пост в блоге: файл <span class="blue">post-1.md</span> (<span class="blue">src/blog/post-1.md</span>)</figcaption>
 </figure>
 
-В файле <span class="bold">post-1.md</span> остались только `title`, `description`, `date`, `permalink` и `brands`, так как остальные параметры (`layout`, `tags`, `author`) теперь определены в файле данных каталога <span class="bold">blog.json</span>.
+В файле <span class="blue">post-1.md</span> остались только `title`, `description`, `date`, `permalink` и `brands`, так как остальные параметры (`layout`, `tags`, `author`) теперь определены в файле данных каталога <span class="blue">blog.json</span>.
 
 Данные из файла данных шаблона автоматически объединятся с данными из Front Matter, при этом данные из Front Matter будут иметь приоритет.
 
