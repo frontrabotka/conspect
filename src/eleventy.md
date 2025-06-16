@@ -32,7 +32,7 @@ permalink: /eleventy.html
 </nav>
 </header>
 
-<span class="cursive"><small class="bold">Дата последней правки: </small><time datetime="2025-06-14"><small>14 июня 2025</small></time></span>
+<span class="cursive"><small class="bold">Дата последней правки: </small><time datetime="2025-06-16"><small>16 июня 2025</small></time></span>
 
 <span class="cursive"><small class="bold">Примечание:</small> <small>в примерах используется синтаксис шаблонизатора Nunjucks.</small></span>
 
@@ -52,7 +52,7 @@ Eleventy предназначен для создания статических
 3. Создайте папку для будущего проекта (например, <span class="blue">eleventy-project</span>): `mkdir eleventy-project`.
 4. Перейдите в эту папку: `cd eleventy-project`. Далее все команды в терминале следует вводить из этой папки.
 5. Создайте и настройте файл <span class="blue">package.json</span>: `npm init -y`.
-6. Установите Eleventy локально в проект: `npm install --save-dev @11ty/eleventy`. Это добавляет запись 6. devDependencies в файл <span class="blue">package.json</span> и устанавливает пакет Eleventy в папку <span class="blue">node_modules</span> в проекте. Локальная установка означает, что Eleventy будет работать только для файлов внутри этого каталога. После установки в папке проекта появятся папка <span class="blue">node_modules</span> и файл <span class="blue">package-lock.json</span>. Файл <span class="blue">package-lock.json</span> обеспечивает воспроизводимость сборки: любой компьютер с <cite>Node.js</cite> и npm сможет установить Eleventy в папку <span class="blue"> node_modules</span> в той же версии, что и у вас. Команда `npm install --save-dev @11ty/eleventy@latest` обновит Eleventy до последней версии.
+6. Установите Eleventy локально в проект: `npm install --save-dev @11ty/eleventy`. Это добавляет запись devDependencies в файл <span class="blue">package.json</span> и устанавливает пакет Eleventy в папку <span class="blue">node_modules</span> в проекте. Локальная установка означает, что Eleventy будет работать только для файлов внутри этого каталога. После установки в папке проекта появятся папка <span class="blue">node_modules</span> и файл <span class="blue">package-lock.json</span>. Файл <span class="blue">package-lock.json</span> обеспечивает воспроизводимость сборки: любой компьютер с <cite>Node.js</cite> и npm сможет установить Eleventy в папку <span class="blue"> node_modules</span> в той же версии, что и у вас. Команда `npm install --save-dev @11ty/eleventy@latest` обновит Eleventy до последней версии.
 7. Создайте конфигурационный файл <span class="blue">.eleventy.js</span> в корне проекта. В этом файле настраивается Eleventy.
 8. Создайте пустой файл <span class="blue">.nojekyll</span> в корне проекта. Это необходимо только при размещении сайта на GitHub Pages, чтобы предотвратить обработку сайта как проекта Jekyll (по умолчанию GitHub Pages использует Jekyll для генерации сайтов).
 9. Запустите локальный сервер разработки: `npx @11ty/eleventy --serve`. Сервер запустится по адресу: <span class="blue">http://localhost:8080/</span>. Локальный сервер останавливается комбинацией клавиш <kbd> Ctrl+C</kbd>.
@@ -183,11 +183,11 @@ module.exports = function (eleventyConfig) {
 
 `module.exports = function (eleventyConfig)` — функция, которая принимает объект `eleventyConfig`, используемый для настройки Eleventy.
 
-`eleventyConfig.addPassthroughCopy('assets');` — указывает Eleventy копировать все файлы из директории <span class="blue">src/assets</span> в выходную директорию без обработки. Файлы скопируются без преобразования или обработки шаблонов. Это полезно для изображений, видео, CSS, JavaScript и шрифтов, так как Eleventy по умолчанию не обрабатывает эти файлы и без функции `addPassthroughCopy` (сквозное копирование) будет их игнорировать.
+`eleventyConfig.addPassthroughCopy('assets')` — указывает Eleventy копировать все файлы из директории <span class="blue">src/assets</span> в выходную директорию без обработки. Файлы скопируются без преобразования или обработки шаблонов. Это полезно для изображений, видео, CSS, JavaScript и шрифтов, так как Eleventy по умолчанию не обрабатывает эти файлы и без функции `addPassthroughCopy` (сквозное копирование) будет их игнорировать.
 
 Пути для копирования файлов `passthroughCopy` относительны к корню проекта, а не входному каталогу. При использовании настройки `input: "src"` и `output: "site"` в файле <span class="blue">.eleventy.js</span>, команда `eleventyConfig.addPassthroughCopy('assets')` скопирует содержимое папки <span class="blue">src/assets</span> в папку <span class="blue">site/assets</span>.
 
-`eleventyConfig.addPassthroughCopy('**/*.jpg');` — копирует все JPG-файлы в проекте в выходную папку, сохраняя структуру каталогов.
+`eleventyConfig.addPassthroughCopy('**/*.jpg')` — копирует все JPG-файлы в проекте в выходную папку, сохраняя структуру каталогов.
 
 `templateFormats: ["md", "njk", "html"]` — определяет, какие расширения файлов Eleventy будет обрабатывать как шаблоны.
 
