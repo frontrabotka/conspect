@@ -47,7 +47,7 @@ permalink: /html.html
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">  <!-- параметры окна просмотра в браузере -->
   <meta content="frontrabotka" name="author">  <!-- имя автора страницы -->
-  <meta content="текст" name="description">  <!-- описание страницы -->
+  <meta content="Описание" name="description">  <!-- описание страницы -->
   <title>...</title>  <!-- название вкладки страницы в браузере -->
 </head>
 <body>  <!-- тело сайта -->
@@ -326,8 +326,6 @@ Twitter Card теги включают:
 Комментарий в HTML-документе указывается так: `< !--комментарий-- >`, и он не виден пользователю в браузере.
 
 Глобальный атрибут `title="текст"` добавляет элементу подсказку, которая всплывает при наведении курсора мыши.
-
-Символы-заменители: `&LT;` (`<`), `&GT;` (`>`), `&AMP;` (`&`), `&QUOT;` (`“`), `&num;` (`#`), `&apos;` (`'`), `&COPY;` (`©`).
 
 </section>
 
