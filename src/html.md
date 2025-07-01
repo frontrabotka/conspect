@@ -43,12 +43,12 @@ permalink: /html.html
 <!DOCTYPE html>  <!-- указывает, что в документе используется HTML5-версия -->
 <html lang="ru">  <!-- открывает содержимое страницы и указывает браузеру язык, на котором написан текст -->
 <head>  <!-- описание характеристик сайта -->
-  <meta charset="UTF-8">  <!-- кодировка сайта -->
-  <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">  <!-- параметры окна просмотра в браузере -->
-  <meta content="frontrabotka" name="author">  <!-- имя автора страницы -->
-  <meta content="Описание" name="description">  <!-- описание страницы -->
-  <title>...</title>  <!-- название вкладки страницы в браузере -->
+    <meta charset="UTF-8">  <!-- кодировка сайта -->
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">  <!-- параметры окна просмотра в браузере -->
+    <meta content="frontrabotka" name="author">  <!-- имя автора страницы -->
+    <meta content="Описание" name="description">  <!-- описание страницы -->
+    <title>...</title>  <!-- название вкладки страницы в браузере -->
 </head>
 <body>  <!-- тело сайта -->
 </body>
@@ -343,7 +343,7 @@ Twitter Card теги включают:
 
 ```html
 <ol start="1" type="1">  <!-- пронумерованный список -->
-  <li>...</li>  <!-- каждый элемент списка заключается в этот тег -->
+    <li>...</li>  <!-- каждый элемент списка заключается в этот тег -->
 </ol>
 ```
 
@@ -357,7 +357,7 @@ Twitter Card теги включают:
 
 ```html
 <ul>...</ul>  <!-- неупорядоченный список -->
-  <li>...</li>
+    <li>...</li>
 </ul>
 ```
 
@@ -374,8 +374,8 @@ Twitter Card теги включают:
 
 ```html
 <dl>  <!-- список описания -->
-  <dt>Термин</dt>  <!-- внутри оборачивается термин -->
-  <dd>Описание</dd>  <!-- внутри оборачивается описание или определение -->
+    <dt>Термин</dt>  <!-- внутри оборачивается термин -->
+    <dd>Описание</dd>  <!-- внутри оборачивается описание или определение -->
 </dl>
 ```
 
@@ -478,13 +478,13 @@ width="1280"
 height="600"
 alt="перо"
 srcset=
-  "small.png 320w,
-  medium.png 480w,
-  large.png 800w"
+    "small.png 320w,
+    medium.png 480w,
+    large.png 800w"
 sizes=
-  "(max-width: 320px) 280px,
-  (max-width: 480px) 440px,
-  800px
+    "(max-width: 320px) 280px,
+    (max-width: 480px) 440px,
+    800px
 ">
 ```
 
@@ -519,15 +519,15 @@ sizes=
 
 ```html
 <picture>  <!-- адаптирует картинки под разные устройства -->
-  <source
-  srcset="small.jpg"
-  media="(max-width: 768px)">
-  <source
-  srcset="medium.jpg"
-  media="(max-width: 1024px)">
-  <source
-  srcset="large.jpg">
-  <img src="image.jpg" alt="текст">
+    <source
+    srcset="small.jpg"
+    media="(max-width: 768px)">
+    <source
+    srcset="medium.jpg"
+    media="(max-width: 1024px)">
+    <source
+    srcset="large.jpg">
+    <img src="image.jpg" alt="текст">
 </picture>
 ```
 
@@ -542,9 +542,9 @@ sizes=
 
 ```html
 <picture>
-  <source srcset="small.avif" type="image/avif">
-  <source srcset="small.webp" type="image/webp">
-  <img src="small.jpg" alt="текст">
+    <source srcset="small.avif" type="image/avif">
+    <source srcset="small.webp" type="image/webp">
+    <img src="small.jpg" alt="текст">
 </picture>
 ```
 
@@ -561,10 +561,10 @@ sizes=
 
 ```html
 <picture>
-  <source
-  srcset="картинка-для-темной-темы.png"
-  media="(prefers-color-scheme: dark)">
-  <img src="картинка-для-светлой-темы.png" alt="текст">
+    <source
+    srcset="картинка-для-темной-темы.png"
+    media="(prefers-color-scheme: dark)">
+    <img src="картинка-для-светлой-темы.png" alt="текст">
 </picture>
 ```
 
@@ -587,12 +587,12 @@ SVG-изображения можно подключать через тег `<i
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg">
-  <symbol id="Lada" viewBox="0 0 24 24">
-    <path d="..."/>
-  </symbol>
-  <symbol id="Volga" viewBox="0 0 24 24">
-    <path d="..."/>
-  </symbol>
+    <symbol id="Lada" viewBox="0 0 24 24">
+        <path d="..."/>
+    </symbol>
+    <symbol id="Volga" viewBox="0 0 24 24">
+        <path d="..."/>
+    </symbol>
 </svg>
 ```
 
@@ -605,8 +605,8 @@ SVG-изображения можно подключать через тег `<i
 
 ```html
 <svg class="icon" viewBox="0 0 24 24" width="24" height="24">
-  <use href="vector.svg#Lada">
-  </use>
+    <use href="vector.svg#Lada">
+    </use>
 </svg>
 ```
 
@@ -619,10 +619,10 @@ SVG-изображения можно подключать через тег `<i
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg">
-  <view id="icon-first" viewBox="0 0 24 24"/>
-  <path d="..."/>
-  <view id="icon-second" viewBox="0 24 24 24"/>
-  <path d="..."/>
+    <view id="icon-first" viewBox="0 0 24 24"/>
+    <path d="..."/>
+    <view id="icon-second" viewBox="0 24 24 24"/>
+    <path d="..."/>
 </svg>
 ```
 
@@ -648,9 +648,9 @@ loop
 poster="thumbnail.jpg"
 muted
 playsinline>
-  <source src="path/to/video.webm" type="video/webm">
-  <source src="path/to/video.av1" type="video/av1">
-  <source src="path/to/video.mp4" type="video/mp4">
+    <source src="path/to/video.webm" type="video/webm">
+    <source src="path/to/video.av1" type="video/av1">
+    <source src="path/to/video.mp4" type="video/mp4">
 </video>
 ```
 
@@ -681,9 +681,9 @@ playsinline>
 
 ```html
 <audio controls>
-  <source src="audio/file.mp3" type="audio/mp3">
-  <source src="audio/file.ogg" type="audio/ogg">
-  Ваш браузер не поддерживает элемент audio.
+    <source src="audio/file.mp3" type="audio/mp3">
+    <source src="audio/file.ogg" type="audio/ogg">
+    Ваш браузер не поддерживает элемент audio.
 </audio>
 ```
 
@@ -714,33 +714,33 @@ playsinline>
 
 ```html
 <table>  <!-- тег для создания таблицы -->
-  <caption>Заголовок таблицы</caption>  <!-- общий заголовок таблицы -->
-  <colgroup>  <!-- группировка столбцов для стилизации -->
-    <col>  <!-- для применения стиля к столбцу -->
-    <col span="2">  <!-- стиль применяется ко второму и третьему столбцу -->
-    <col>
-  </colgroup>
-  <thead>  <!-- шапка таблицы -->
-    <tr>  <!-- тег для создания ряда в таблице -->
-      <th scope="col">Заголовок столбца</th>  <!-- заголовок столбца -->
-      <th>...</th>
-      <th>...</th>
-    </tr>
-  </thead>
-  <tbody>  <!-- основная часть таблицы -->
-    <tr>
-      <td rowspan="3">...</td>  <!-- ячейка с объединением строк по вертикали -->
-      <td>...</td>
-      <td>...</td>
-    </tr>
-  </tbody>
-  <tfoot>  <!-- заключительная часть таблицы -->
-    <tr>
-      <td colspan="2">...</td>  <!-- ячейка с объединением строк по горизонтали -->
-      <td>...</td>
-      <td>...</td>
-    </tr>
-  </tfoot>
+    <caption>Заголовок таблицы</caption>  <!-- общий заголовок таблицы -->
+    <colgroup>  <!-- группировка столбцов для стилизации -->
+        <col>  <!-- для применения стиля к столбцу -->
+        <col span="2">  <!-- стиль применяется ко второму и третьему столбцу -->
+        <col>
+    </colgroup>
+    <thead>  <!-- шапка таблицы -->
+        <tr>  <!-- тег для создания ряда в таблице -->
+            <th scope="col">Заголовок столбца</th>  <!-- заголовок столбца -->
+            <th>...</th>
+            <th>...</th>
+        </tr>
+    </thead>
+    <tbody>  <!-- основная часть таблицы -->
+        <tr>
+           <td rowspan="3">...</td>  <!-- ячейка с объединением строк по вертикали -->
+           <td>...</td>
+           <td>...</td>
+        </tr>
+    </tbody>
+    <tfoot>  <!-- заключительная часть таблицы -->
+        <tr>
+            <td colspan="2">...</td>  <!-- ячейка с объединением строк по горизонтали -->
+            <td>...</td>
+            <td>...</td>
+        </tr>
+    </tfoot>
 </table>
 ```
 
@@ -927,37 +927,37 @@ playsinline>
 
 ```html
 <form
-  id="form-main"
-  action="/process"
-  method="post"
-  enctype="text/plain"
-  novalidate>
-  <label class="имя_класса" for="top">Подпись для поля</label>  <!-- создание подписи для поля c id="top" -->
-  <input type="text" id="top" placeholder="Текст">  <!-- поле для ввода текста -->
-  <input type="password" value="Пароль" pattern="[A-Za-z0-9]{8,}">  <!-- поле для ввода пароля -->
-  <input type="email" inputmode="email" autocomplete="email" required>  <!-- поле для ввода почты -->
-  <input type="search" minlength="4" maxlength="30" inputmode="search">  <!-- поле для поиска -->
-  <input type="url" inputmode="url" autofocus>  <!-- поле для ввода адреса веб-страницы -->
-  <input type="tel" inputmode="tel">  <!-- поле для ввода телефона -->
-  <input type="number" inputmode="numeric" tabindex="1">  <!-- поле для ввода числа -->
-  <input type="color">  <!-- поле для выбора цвета -->
-  <input type="date">  <!-- поле для выбора даты -->
-  <input type="time">  <!-- поле для установки времени -->
-  <input type="datetime-local">  <!-- поле для установки даты и времени -->
-  <input type="checkbox" value="sugar">  <!-- создаёт флажок или чекбокс -->
-  <input type="radio">  <!-- создаёт радиокнопку -->
-  <input type="range" min="1" max="100">  <!-- создаёт ползунок для выбора чисел из заданного диапазона -->
-  <input type="file" accept=".jpg, video/*" capture="user">  <!-- создаёт кнопку для выбора файла -->
-  <input type="button" value="Кнопка">  <!-- создаёт кнопку, но без отправки формы -->
-  <input type="submit">  <!-- создаёт кнопку, для отправки формы -->
-  <input type="reset">  <!-- создаёт кнопку, для очистки полей -->
-  <button>Кнопка</button>  <!-- создаёт кнопку с типом submit -->
+    id="form-main"
+    action="/process"
+    method="post"
+    enctype="text/plain"
+    novalidate>
+    <label class="имя_класса" for="top">Подпись для поля</label>  <!-- создание подписи для поля c id="top" -->
+    <input type="text" id="top" placeholder="Текст">  <!-- поле для ввода текста -->
+    <input type="password" value="Пароль" pattern="[A-Za-z0-9]{8,}">  <!-- поле для ввода пароля -->
+    <input type="email" inputmode="email" autocomplete="email" required>  <!-- поле для ввода почты -->
+    <input type="search" minlength="4" maxlength="30" inputmode="search">  <!-- поле для поиска -->
+    <input type="url" inputmode="url" autofocus>  <!-- поле для ввода адреса веб-страницы -->
+    <input type="tel" inputmode="tel">  <!-- поле для ввода телефона -->
+    <input type="number" inputmode="numeric" tabindex="1">  <!-- поле для ввода числа -->
+    <input type="color">  <!-- поле для выбора цвета -->
+    <input type="date">  <!-- поле для выбора даты -->
+    <input type="time">  <!-- поле для установки времени -->
+    <input type="datetime-local">  <!-- поле для установки даты и времени -->
+    <input type="checkbox" value="sugar">  <!-- создаёт флажок или чекбокс -->
+    <input type="radio">  <!-- создаёт радиокнопку -->
+    <input type="range" min="1" max="100">  <!-- создаёт ползунок для выбора чисел из заданного диапазона -->
+    <input type="file" accept=".jpg, video/*" capture="user">  <!-- создаёт кнопку для выбора файла -->
+    <input type="button" value="Кнопка">  <!-- создаёт кнопку, но без отправки формы -->
+    <input type="submit">  <!-- создаёт кнопку, для отправки формы -->
+    <input type="reset">  <!-- создаёт кнопку, для очистки полей -->
+    <button>Кнопка</button>  <!-- создаёт кнопку с типом submit -->
 </form>
 <textarea
-  form="form-main"
-  spellcheck="false"
-  rows="10"
-  cols="10">
+    form="form-main"
+    spellcheck="false"
+    rows="10"
+    cols="10">
 </textarea>
 ```
 
@@ -1058,10 +1058,10 @@ playsinline>
 
 ```html
 <form>
-  <label for="apple">Apple</label>
-  <input id="apple" type="radio" name="product">
-  <label for="samsung">Samsung</label>
-  <input id="samsung" type="radio" name="product">
+    <label for="apple">Apple</label>
+    <input id="apple" type="radio" name="product">
+    <label for="samsung">Samsung</label>
+    <input id="samsung" type="radio" name="product">
 </form>
 ```
 
@@ -1071,13 +1071,13 @@ playsinline>
 
 ```html
 <form>
-  <select multiple size="2">  <!-- селектор выбора -->
-    <optgroup label="Группа 1">  <!-- группировка опций внутри выпадающего списка -->
-      <option>Опция 1</option>  <!-- создаёт элемент внутри выпадающего списка -->
-      <option selected>Опция 2</option>
-      <option>Опция 3</option>
-    </optgroup>
-  </select>
+    <select multiple size="2">  <!-- селектор выбора -->
+        <optgroup label="Группа 1">  <!-- группировка опций внутри выпадающего списка -->
+            <option>Опция 1</option>  <!-- создаёт элемент внутри выпадающего списка -->
+            <option selected>Опция 2</option>
+            <option>Опция 3</option>
+        </optgroup>
+    </select>
 </form>
 ```
 
@@ -1100,15 +1100,15 @@ playsinline>
 
 ```html
 <form>
-  <fieldset>  <!-- группирует элементы формы -->
-    <legend>Выбор продукта</legend>  <!-- добавляет заголовок -->
-    <label>
-      <input type="radio" name="product"> Продукт 1
-    </label>
-    <label>
-      <input type="radio" name="product"> Продукт 2
-    </label>
-  </fieldset>
+    <fieldset>  <!-- группирует элементы формы -->
+        <legend>Выбор продукта</legend>  <!-- добавляет заголовок -->
+        <label>
+            <input type="radio" name="product"> Продукт 1
+        </label>
+        <label>
+            <input type="radio" name="product"> Продукт 2
+        </label>
+    </fieldset>
 </form>
 ```
 
@@ -1123,11 +1123,11 @@ playsinline>
 
 ```html
 <form>
-  <input type="text" list="fruits">
-  <datalist id="fruits">  <!-- набор опций для раскрывающегося списка -->
-    <option value="Apple">
-    <option value="Cherry">
-  </datalist>
+    <input type="text" list="fruits">
+    <datalist id="fruits">  <!-- набор опций для раскрывающегося списка -->
+        <option value="Apple">
+        <option value="Cherry">
+    </datalist>
 </form>
 ```
 
@@ -1152,8 +1152,8 @@ playsinline>
 
 ```html
 <details open>  <!-- создаёт «аккордеон» -->
-  <summary>Заголовок для раскрывающегося списка</summary>  <!-- заголовок «аккордеона» -->
-  <p>Текст</p>
+    <summary>Заголовок для раскрывающегося списка</summary>  <!-- заголовок «аккордеона» -->
+    <p>Текст</p>
 </details>
 ```
 
@@ -1166,8 +1166,8 @@ playsinline>
 
 ```html
 <progress
-max="100"
-value="70">
+    max="100"
+    value="70">
 </progress>
 ```
 
@@ -1182,10 +1182,10 @@ value="70">
 
 ```html
 <iframe
-src="URL"
-allow="allow-features"
-allowfullscreen
-sandbox>
+    src="URL"
+    allow="allow-features"
+    allowfullscreen
+    sandbox>
 </iframe>
 ```
 
@@ -1299,8 +1299,8 @@ sandbox>
 
 ```html
 <p>
-  <dfn>Термин</dfn>  
-  Определение
+    <dfn>Термин</dfn>  
+    Определение
 </p>
 ```
 
@@ -1332,8 +1332,8 @@ sandbox>
 
 ```html
 <figure>
-  <img>
-  <figcaption>Подпись</figcaption>  <!-- подпись к элементу <figure> -->
+    <img>
+    <figcaption>Подпись</figcaption>  <!-- подпись к элементу <figure> -->
 </figure>
 ```
 

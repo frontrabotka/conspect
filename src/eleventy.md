@@ -239,12 +239,12 @@ Eleventy обрабатывает файлы с расширениями, ука
     <link href="assets/style/main.css" rel="stylesheet">
 </head>
 <body>
-<main>
-    {% block content %}
-    {{ content | safe }}  <!-- Содержимое страницы, вставляемое сюда -->
-    {% endblock %}
-</main>
-{% include 'footer.njk' %}  <!-- Подключаем футер -->
+    <main>
+        {% block content %}
+        {{ content | safe }}  <!-- Содержимое страницы, вставляемое сюда -->
+        {% endblock %}
+    </main>
+    {% include 'footer.njk' %}  <!-- Подключаем футер -->
 </body>
 </html>
 {% endraw %}
@@ -333,9 +333,9 @@ description: Коллекционные модели автомобилей ра
     <time>Дата публикации: {{ date | date('YYYY-MM-DD') }}</time>  <!-- date берется из front matter, и, если date нет - страница не создастся. -->
     <h2>Список автомобилей:</h2>
     <ul>
-    {% for brand in brands %}
-        <li>{{ brand }}</li>
-    {% endfor %}
+        {% for brand in brands %}
+            <li>{{ brand }}</li>
+        {% endfor %}
     </ul>
     {{ content | safe }}
 </article>
@@ -398,7 +398,7 @@ description: Коллекция легковых автомобилей СССР
 author: frontrabotka
 tags:
 - posts
-- sssr
+- ussr
 - passenger
 date: 2025-05-01
 permalink: blog/post-1/
@@ -415,7 +415,7 @@ brands:
 
 `layout: post.njk` — указывает Eleventy использовать файл <span class="blue">post.njk</span> как макет.
 
-`tags: posts`, `sssr` и `passenger` — указывает Eleventy, в какие коллекции включить данную страницу. Теги автоматически создают соответствующие коллекции (см. раздел «<a href="#header-9">Коллекции</a>»).
+`tags: posts`, `ussr` и `passenger` — указывает Eleventy, в какие коллекции включить данную страницу. Теги автоматически создают соответствующие коллекции (см. раздел «<a href="#header-9">Коллекции</a>»).
 
 `date: 2025-05-01` — переопределяет дату по умолчанию, для сортировки.
 
@@ -446,7 +446,7 @@ brands:
   "description": "Коллекция легковых автомобилей СССР",
   "tags": [
     "posts",
-    "sssr",
+    "ussr",
     "passenger"
   ],
   "author": "frontrabotka",
@@ -643,12 +643,12 @@ description: Коллекционные модели автомобилей ра
 <h2>Последние записи в блоге:</h2>
 
 {%- for post in collections.posts %}
-  <article>
-    <a href="{{ post.url | url }}">
-      <h2>{{ post.data.title }}</h2>
-    </a>
-      <time>{{ post.data.date | date('YYYY-MM-DD') }}</time>
-  </article>
+    <article>
+        <a href="{{ post.url | url }}">
+            <h2>{{ post.data.title }}</h2>
+        </a>
+        <time>{{ post.data.date | date('YYYY-MM-DD') }}</time>
+    </article>
 {%- endfor %}
 {% endraw %}
 ```
@@ -676,12 +676,12 @@ Nunjucks отображает все символы, не входящие в в
 
 ```liquid {% raw %} 
 {%- for post in collections.posts | reverse %}
-  <article>
-    <a href="{{ post.url | url }}">
-      <h2>{{ post.data.title }}</h2>
-    </a>
-      <time>{{ post.data.date | date('YYYY-MM-DD') }}</time>
-  </article>
+    <article>
+        <a href="{{ post.url | url }}">
+            <h2>{{ post.data.title }}</h2>
+        </a>
+        <time>{{ post.data.date | date('YYYY-MM-DD') }}</time>
+    </article>
 {%- endfor %}
 {% endraw %}
 ```
@@ -700,12 +700,12 @@ Eleventy автоматически включает весь контент (н
 
 ```liquid {% raw %} 
 {%- for post in collections.all %}
-  <article>
-    <a href="{{ post.url | url }}">
-      <h2>{{ post.data.title }}</h2>
-    </a>
-      <time>{{ post.data.date }}</time>
-  </article>
+    <article>
+        <a href="{{ post.url | url }}">
+            <h2>{{ post.data.title }}</h2>
+        </a>
+        <time>{{ post.data.date }}</time>
+    </article>
 {%- endfor %}
 {% endraw %}
 ```
@@ -777,18 +777,18 @@ permalink: "brands/{{ car.name | slugify }}/"
 <h1>{{ car.name }}</h1>
 
 <ul>
-  {% for brand in car.brands %}
-    <li>{{ brand }}</li>
-  {% endfor %}
+    {% for brand in car.brands %}
+        <li>{{ brand }}</li>
+    {% endfor %}
 </ul>
 
 <nav>
-  {% if pagination.previous %}  <!-- Проверяем, есть ли предыдущая страница -->
-    <a href="{{ pagination.previous | url }}">Предыдущая</a>  <!-- Если есть, показываем ссылку -->
-  {% endif %}
-  {% if pagination.next %}  <!-- Проверяем, есть ли следующая страница -->
-    <a href="{{ pagination.next | url }}">Следующая</a>  <!-- Если есть, показываем ссылку --> 
-  {% endif %}
+    {% if pagination.previous %}  <!-- Проверяем, есть ли предыдущая страница -->
+        <a href="{{ pagination.previous | url }}">Предыдущая</a>  <!-- Если есть, показываем ссылку -->
+    {% endif %}
+    {% if pagination.next %}  <!-- Проверяем, есть ли следующая страница -->
+        <a href="{{ pagination.next | url }}">Следующая</a>  <!-- Если есть, показываем ссылку --> 
+    {% endif %}
 </nav>
 {% endraw %}
 ```
@@ -821,9 +821,9 @@ permalink: "brands/{{ car.name | slugify }}/"
 
 В результате сборки сайта создадутся 3 страницы в папке <span class="blue">brands/</span>, и каждая страница будет содержать контент, сгенерированный на основе одной записи из <span class="blue">brands.json</span>:
 
-+ <span class="blue">gruzovye-avtomobili-sssr/index.html</span>
++ <span class="blue">gruzovye-avtomobili-ussr/index.html</span>
 + <span class="blue">inostrannye-avtomobili/index.html</span>
-+ <span class="blue">legkovye-avtomobili-sssr/index.html</span>
++ <span class="blue">legkovye-avtomobili-ussr/index.html</span>
 
 Страницы сгенерированы, но пока не связаны с главной страницей. Чтобы добавить ссылки на эти страницы, измените файл <span class="blue">index.md</span>:
 
@@ -841,8 +841,8 @@ description: Коллекционные модели автомобилей ра
 <h2>Категории автомобильных моделей:</h2>
 
 <ul>
-    <li><a href="{{ 'brands/legkovye-avtomobili-sssr/' | url }}">Легковые автомобили СССР</a></li>
-    <li><a href="{{ 'brands/gruzovye-avtomobili-sssr/' | url }}">Грузовые автомобили СССР</a></li>
+    <li><a href="{{ 'brands/legkovye-avtomobili-ussr/' | url }}">Легковые автомобили СССР</a></li>
+    <li><a href="{{ 'brands/gruzovye-avtomobili-ussr/' | url }}">Грузовые автомобили СССР</a></li>
     <li><a href="{{ 'brands/inostrannye-avtomobili/' | url }}">Иностранные автомобили</a></li>
 </ul>
 {% endraw %}
@@ -950,7 +950,7 @@ permalink: "{% raw %}/{{ title | slugify }}/{% endraw %}"
 ---
 ```
 
-Результатом преобразования будет создание файла <span class="blue">index.html</span> в папке <span class="blue">legkovye-avtomobili-sssr/</span>: <span class="blue">/legkovye-avtomobili-sssr/index.html</span>.
+Результатом преобразования будет создание файла <span class="blue">index.html</span> в папке <span class="blue">legkovye-avtomobili-ussr/</span>: <span class="blue">/legkovye-avtomobili-ussr/index.html</span>.
 
 Фильтр `slugify` выполняет следующие преобразования:
 
