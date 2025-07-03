@@ -46,16 +46,70 @@ Eleventy предназначен для создания статических
 
 1. Скачайте и установите <a href="https://nodejs.org/en/download" target="_blank" rel="noopener noreferrer"><cite>Node.js</cite></a> (требуется Node.js версии 18 или выше) и npm.
 2. Проверьте работоспособность:
-+ `node --version` — показывает версию Node.js;
-+ `npm --version` — показывает версию npm;
-+ При необходимости также можно обновить менеджер пакетов npm до последней версии глобально: `npm install -g npm@latest`.
-3. Создайте папку для будущего проекта (например, <span class="blue">eleventy-project</span>): `mkdir eleventy-project`.
-4. Перейдите в эту папку: `cd eleventy-project`. Далее все команды в терминале следует вводить из этой папки.
-5. Создайте и настройте файл <span class="blue">package.json</span>: `npm init -y`.
-6. Установите Eleventy локально в проект: `npm install --save-dev @11ty/eleventy`. Это добавляет запись devDependencies в файл <span class="blue">package.json</span> и устанавливает пакет Eleventy в папку <span class="blue">node_modules</span> в проекте. Локальная установка означает, что Eleventy будет работать только для файлов внутри этого каталога. После установки в папке проекта появятся папка <span class="blue">node_modules</span> и файл <span class="blue">package-lock.json</span>. Файл <span class="blue">package-lock.json</span> обеспечивает воспроизводимость сборки: любой компьютер с <cite>Node.js</cite> и npm сможет установить Eleventy в папку <span class="blue"> node_modules</span> в той же версии, что и у вас. Команда `npm install --save-dev @11ty/eleventy@latest` обновит Eleventy до последней версии.
-7. Создайте конфигурационный файл <span class="blue">.eleventy.js</span> в корне проекта. В этом файле настраивается Eleventy.
++ показать версию Node.js:
+
+```shell
+node --version
+```
+
++ показать версию npm:
+
+```shell
+npm --version
+```
+
+При необходимости также можно обновить менеджер пакетов npm до последней версии глобально:
+
+```shell
+npm install -g npm@latest
+```
+
+3. Создайте папку для будущего проекта (например, <span class="blue">eleventy-project</span>):
+
+```shell
+mkdir eleventy-project
+```
+
+4. Перейдите в эту папку:
+
+```shell
+cd eleventy-project
+```
+
+Далее все команды в терминале следует вводить из этой папки.
+
+5. Создайте и настройте файл <span class="blue">package.json</span>:
+
+```shell
+npm init -y
+```
+
+6. Установите Eleventy локально в проект:
+
+```shell
+npm install --save-dev @11ty/eleventy
+```
+
+Это добавляет запись devDependencies в файл <span class="blue">package.json</span> и устанавливает пакет Eleventy в папку <span class="blue">node_modules</span> в проекте. Локальная установка означает, что Eleventy будет работать только для файлов внутри этого каталога. После установки в папке проекта появятся папка <span class="blue">node_modules</span> и файл <span class="blue">package-lock.json</span>. Файл <span class="blue">package-lock.json</span> обеспечивает воспроизводимость сборки: любой компьютер с <cite>Node.js</cite> и npm сможет установить Eleventy в папку <span class="blue"> node_modules</span> в той же версии, что и у вас. 
+
+Обновить Eleventy до последней версии:
+
+```shell
+npm install --save-dev @11ty/eleventy@latest
+```
+
+7. Создайте конфигурационный файл <span class="blue">.eleventy.js</span> в корне проекта. В этом 
+файле настраивается Eleventy.
+
 8. Создайте пустой файл <span class="blue">.nojekyll</span> в корне проекта. Это необходимо только при размещении сайта на GitHub Pages, чтобы предотвратить обработку сайта как проекта Jekyll (по умолчанию GitHub Pages использует Jekyll для генерации сайтов).
-9. Запустите локальный сервер разработки: `npx @11ty/eleventy --serve`. Сервер запустится по адресу: <span class="blue">http://localhost:8080/</span>. Локальный сервер останавливается комбинацией клавиш <kbd> Ctrl+C</kbd>.
+
+9. Запустите локальный сервер разработки:
+
+```shell
+npx @11ty/eleventy --serve
+```
+
+Сервер запустится по адресу: <span class="blue">http://localhost:8080/</span>. Локальный сервер останавливается комбинацией клавиш <kbd> Ctrl+C</kbd>.
 
 По умолчанию Eleventy использует структуру ваших файлов и папок для создания статического сайта.
 
@@ -973,7 +1027,12 @@ permalink: "{% raw %}/{{ title | slugify }}/{% endraw %}"
 
 Установка плагина <cite>@11ty/eleventy-plugin-syntaxhighlight</cite>:
 
-1. Установите плагин: `npm install --save-dev @11ty/eleventy-plugin-syntaxhighlight`.
+1. Установите плагин:
+
+```shell
+npm install --save-dev @11ty/eleventy-plugin-syntaxhighlight
+```
+
 2. Зарегистрируйте плагин в файле <span class="blue">.eleventy.js</span>:
 
 <figure>
@@ -1018,16 +1077,16 @@ module.exports = function (eleventyConfig) {
 
 Для подсветки синтаксиса, код необходимо заключить в тройные обратные кавычки (<code>```</code>) с указанием языка программирования (например, javascript):
 
-<pre><code>```js
+```js {% raw %}
+```js
 const example = "Hello World";
 console.log(example);
-```</code></pre>
+```
+{% endraw %}
 
-Если требуется подсветить и вывести код Nunjucks без обработки, используйте теги {% raw %} `{% raw %}`и `{% endraw %}`{% endraw %}. Например:
+Если требуется подсветить и вывести код Nunjucks без обработки, используйте теги `{% raw %} {% raw %}...{% endraw %} {% endraw %}`. Например:
 
-{% raw %}
-
-```liquid
+```liquid {% raw %}
 {% raw %}
 <body>
     <main>
@@ -1038,9 +1097,10 @@ console.log(example);
     {% include 'footer.njk' %}
 </body>
 {% endraw %}
+{% endraw %}
 ```
 
-{% endraw %}
+
 
 </section>
 
