@@ -1118,7 +1118,7 @@ img: 'assets/img/eleventy/eleventy.svg',
 width: '40',
 height: '40',
 alt: 'сайт Eleventy',
-cite: 'Eleventy Docs'
+cite: 'Eleventy Guide'
 }
 ] %}
 
