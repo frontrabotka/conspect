@@ -58,7 +58,7 @@ node --version
 npm --version
 ```
 
-При необходимости также можно обновить менеджер пакетов npm до последней версии глобально:
+    При необходимости также можно обновить менеджер пакетов npm до последней версии глобально:
 
 ```shell
 npm install -g npm@latest
@@ -76,7 +76,7 @@ mkdir eleventy-project
 cd eleventy-project
 ```
 
-Далее все команды в терминале следует вводить из этой папки.
+    Далее все команды в терминале следует вводить из этой папки.
 
 5. Создайте и настройте файл <span class="blue">package.json</span>:
 
@@ -90,13 +90,13 @@ npm init -y
 npm install --save-dev @11ty/eleventy
 ```
 
-Это добавляет запись devDependencies в файл <span class="blue">package.json</span> и устанавливает пакет Eleventy в папку <span class="blue">node_modules</span> в проекте. Локальная установка означает, что Eleventy будет работать только для файлов внутри этого каталога. После установки в папке проекта появятся папка <span class="blue">node_modules</span> и файл <span class="blue">package-lock.json</span>. Файл <span class="blue">package-lock.json</span> обеспечивает воспроизводимость сборки: любой компьютер с <cite>Node.js</cite> и npm сможет установить Eleventy в папку <span class="blue"> node_modules</span> в той же версии, что и у вас. 
-
-Обновить Eleventy до последней версии:
-
-```shell
-npm install --save-dev @11ty/eleventy@latest
-```
+    Это добавляет запись devDependencies в файл <span class="blue">package.json</span> и устанавливает пакет Eleventy в папку <span class="blue">node_modules</span> в проекте. Локальная установка означает, что Eleventy будет работать только для файлов внутри этого каталога. После установки в папке проекта появятся папка <span class="blue">node_modules</span> и файл <span class="blue">package-lock.json</span>. Файл <span class="blue">package-lock.json</span> обеспечивает воспроизводимость сборки: любой компьютер с <cite>Node.js</cite> и npm сможет установить Eleventy в папку <span class="blue"> node_modules</span> в той же версии, что и у вас. 
+    
+    Обновить Eleventy до последней версии:
+    
+    ```shell
+    npm install --save-dev @11ty/eleventy@latest
+    ```
 
 7. Создайте конфигурационный файл <span class="blue">.eleventy.js</span> в корне проекта. В этом 
 файле настраивается Eleventy.
@@ -109,7 +109,7 @@ npm install --save-dev @11ty/eleventy@latest
 npx @11ty/eleventy --serve
 ```
 
-Сервер запустится по адресу: <span class="blue">http://localhost:8080/</span>. Локальный сервер останавливается комбинацией клавиш <kbd> Ctrl+C</kbd>.
+    Сервер запустится по адресу: <span class="blue">http://localhost:8080/</span>. Локальный сервер останавливается комбинацией клавиш <kbd> Ctrl+C</kbd>.
 
 По умолчанию Eleventy использует структуру ваших файлов и папок для создания статического сайта.
 
@@ -574,9 +574,9 @@ post-1.json</span>.</small>
 <figcaption>Файл <span class="blue">blog.json</span> (<span class="blue">src/blog/blog.json</span>)</figcaption>
 </figure>
 
-`"tags": ["posts"]` — добавляет каждый файл в этой папке в коллекцию posts. Если в подпапках нет своих файлов данных каталога, то эти теги будут применяться и к файлам в этих подпапках.
-
-Теперь эти данные (например, `author`, определённый в <span class="blue">blog.json</span>) доступны через переменные в любом шаблоне, расположенном в папке <span class="blue">blog/</span>. Для доступа к данным в шаблонах (например, в <span class="blue">post.njk</span>) используется синтаксис: `{% raw %} {{ author }} {% endraw %}`.
+    `"tags": ["posts"]` — добавляет каждый файл в этой папке в коллекцию posts. Если в подпапках нет своих файлов данных каталога, то эти теги будут применяться и к файлам в этих подпапках.
+    
+    Теперь эти данные (например, `author`, определённый в <span class="blue">blog.json</span>) доступны через переменные в любом шаблоне, расположенном в папке <span class="blue">blog/</span>. Для доступа к данным в шаблонах (например, в <span class="blue">post.njk</span>) используется синтаксис: `{% raw %} {{ author }} {% endraw %}`.
 
 3. После создания файла данных каталога, измените файл <span class="blue">post-1.md</span>:
 
