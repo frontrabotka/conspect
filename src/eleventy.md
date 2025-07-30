@@ -94,9 +94,9 @@ npm install --save-dev @11ty/eleventy
     
     Обновить Eleventy до последней версии:
     
-    ```shell
-    npm install --save-dev @11ty/eleventy@latest
-    ```
+```shell
+npm install --save-dev @11ty/eleventy@latest
+```
 
 7. Создайте конфигурационный файл <span class="blue">.eleventy.js</span> в корне проекта. В этом 
 файле настраивается Eleventy.
@@ -1099,8 +1099,6 @@ console.log(example);
 {% endraw %}
 {% endraw %}
 ```
-
-
 
 </section>
 
