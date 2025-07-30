@@ -30,13 +30,13 @@ permalink: /git.html
 
 ## <span id="header-1">Основные команды в терминале (Windows)</span>
 
-+ Выбор диска, например диска <span class="blue">D</span>:
++ Выбор диска, например, диска <span class="blue">D</span>:
 
 ```shell
 D:
 ```
 
-+ Перейти на папку выше:
++ Перейти в папку выше:
 
 ```shell
 cd..
@@ -104,7 +104,7 @@ git init
 git add .
 ```
 
-    Место, где Git хранит информацию о файлах, готовых к коммиту, называется «индекс» гита (staging area).
+    Место, где Git хранит информацию о файлах, готовых к коммиту, называется «индексом» Git (staging area).
     
     Чтобы добавить определённый файл, например, <span class="blue">index.html</span>:
     
@@ -136,7 +136,7 @@ git config --global user.name "имя_пользователя"
 git config --global user.email "электронная_почта"
 ```
 
-    `config` читает или изменяет текущую конфигурацию git на компьютере.
+    `config` читает или изменяет текущую конфигурацию Git на компьютере.
 
 6. Проверьте конфигурацию:
 
@@ -268,7 +268,7 @@ git remote remove origin
 git remote add origin <URL_репозитория>
 ```
 
-4. Привяжите локальную ветку <span class="blue">main</span> к удалённой ветке <span class="blue">main</span> на новом репозитории и отправьте все коммиты:
+4. Привяжите локальную ветку <span class="blue">main</span> на новом репозитории и отправьте все коммиты:
 
 ```shell
 git push --set-upstream origin main
